@@ -6,7 +6,7 @@ var Computer = function () {
 		},
 		
 		renderDeck : function () {
-			console.log("mydeck");
+			console.log("it's a mistery!");
 		}
 	}
 }
