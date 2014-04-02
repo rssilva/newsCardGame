@@ -7,7 +7,7 @@ var GameMaster = function () {
 			this.computer = new Computer();
 			this.computer.init();
 			
-			this.loadCards("js/cardsList.json");
+			this.loadCards('js/cardsList.json');
 		},
 		
 		loadCards : function (_url) {

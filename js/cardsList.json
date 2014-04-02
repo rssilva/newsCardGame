@@ -2,51 +2,63 @@
     "availableCards": [
         {
             "name": "myName1",
-            "strength": 3,
-            "speed": 6,
-            "agility": 10,
-            "height": 180,
-            "weight": 120
+			"attributes": {
+				"strength": 3,
+				"speed": 6,
+				"agility": 10,
+				"height": 180,
+				"weight": 120
+			}
         },
         {
             "name": "myName2",
-            "strength": 10,
-            "speed": 2,
-            "agility": 5,
-            "height": 210,
-            "weight": 150
+			"attributes": {
+				"strength": 10,
+				"speed": 2,
+				"agility": 5,
+				"height": 210,
+				"weight": 150
+			}
         },
 		{
             "name": "myName3",
-            "strength": 7,
-            "speed": 2,
-            "agility": 4,
-            "height": 170,
-            "weight": 120
+			"attributes": {
+				"strength": 7,
+				"speed": 2,
+				"agility": 4,
+				"height": 170,
+				"weight": 120
+			}
         },
 		{
             "name": "myName4",
-            "strength": 8,
-            "speed": 6,
-            "agility": 4,
-            "height": 150,
-            "weight": 70
+			"attributes": {
+				"strength": 8,
+				"speed": 6,
+				"agility": 4,
+				"height": 150,
+				"weight": 70
+			}
         },
 		{
             "name": "myName5",
-            "strength": 1,
-            "speed": 7,
-            "agility": 6,
-            "height": 180,
-            "weight": 95
+			"attributes": {
+				"strength": 1,
+				"speed": 7,
+				"agility": 6,
+				"height": 180,
+				"weight": 95
+			}
         },
 		{
             "name": "myName6",
-            "strength": 4,
-            "speed": 7,
-            "agility": 6,
-            "height": 190,
-            "weight": 100
+			"attributes": {
+				"strength": 4,
+				"speed": 7,
+				"agility": 6,
+				"height": 190,
+				"weight": 100
+			}
         }
     ]
 }

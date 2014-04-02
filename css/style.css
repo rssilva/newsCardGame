@@ -1,0 +1,77 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background: green;
+}
+
+.deck {
+	position: absolute;
+	width: 10%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#player {
+	left: 30%;
+}
+
+#computer {
+	right: 30%;
+}
+
+.card {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	transition: all 1s;
+}
+
+.card > div {
+	text-align: center;
+	backface-visibility: hidden;
+	transition: all 1s;
+}
+
+.card span {
+	display: block;
+	width: 50px;
+	font-family: Arial;
+	font-size: 11px;
+	text-transform: lowercase;
+}
+
+.card .front {
+	position: relative;
+	z-index: 2;
+	background: #ccc;
+	padding: 0.5em 1em;
+	border: 0.5em solid #aaa;
+	visibility: hidden;
+	transform: rotateY(180deg);
+}
+
+.card .cover {
+	position: absolute;
+	background: linear-gradient(to bottom, #c0c0c0, #efefef);;
+	transform: rotateY(0);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.flipped {
+	top: 100px;
+	z-index: 2;
+}
+
+.flipped .front {
+	transform: rotateY(0);
+	visibility: visible;
+}
+
+.flipped .cover {
+	transform: rotateY(-180deg);
+}
