@@ -31,15 +31,17 @@ var Player = function () {
 		flipFirstCard : function () {
 			var firstCard = this.deck[this.deck.length-1],
 				attribute;
-		
-			this.firstCardHtml = this.deckHtml.find('li:last-child');
-			this.firstCardHtml.find('.card-name').text(firstCard.name);
-			
-			for (attribute in firstCard.attributes) {
-				this.firstCardHtml.find('.' + attribute).text(firstCard.attributes[attribute]);
+				
+			if (!this.firstCardHtml.hasClass('flipped')) {
+				this.firstCardHtml = this.deckHtml.find('li:last-child');
+				this.firstCardHtml.find('.card-name').text(firstCard.name);
+				
+				for (attribute in firstCard.attributes) {
+					this.firstCardHtml.find('.' + attribute).text(firstCard.attributes[attribute]);
+				}
+				
+				this.firstCardHtml.addClass('flipped');
 			}
-			
-			this.firstCardHtml.addClass('flipped');
 		},
 		
 		bindEvents : function () {

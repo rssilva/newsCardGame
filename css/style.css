@@ -82,6 +82,7 @@ html, body {
 
 .card .cover {
 	position: absolute;
+	background: #c0c0c0;
 	background: linear-gradient(to bottom, #c0c0c0, #efefef);;
 	transform: rotateY(0);
 	border: 1px solid #666;
