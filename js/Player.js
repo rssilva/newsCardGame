@@ -3,7 +3,6 @@ var Player = function () {
 		init : function () {
 			this.deckHtml = $('#player');
 			this.deck = [];
-			this.firstCardHtml = this.deckHtml.find('li:first-child');
 			
 			this.bindEvents();
 		},
@@ -20,7 +19,7 @@ var Player = function () {
 				frontDiv.append($('<span class="card-name"></span>').text('???'));
 				
 				for (attribute in this.deck[counter].attributes) {
-					span = $('<span class="' + attribute + '"></span>').text('???');
+					span = $('<span isattr="true" class="' + attribute + '"></span>').text('???');
 					frontDiv.append(span);
 				}
 				
@@ -32,19 +31,55 @@ var Player = function () {
 		},
 		
 		flipFirstCard : function () {
-			var firstCard = this.deck[this.deck.length-1],
+			var listSize = this.deckHtml.find('li').length,
+				firstCard = this.deck[listSize - 1],
 				attribute;
-				
-			if (!this.firstCardHtml.hasClass('flipped')) {
+
+			this.firstCardHtml = this.deckHtml.find('li:last-child');
+
+			if (firstCard && !this.firstCardHtml.hasClass('flipped')) {
 				this.firstCardHtml = this.deckHtml.find('li:last-child');
 				this.firstCardHtml.find('.card-name').text(firstCard.name);
-				
+
 				for (attribute in firstCard.attributes) {
 					this.firstCardHtml.find('.' + attribute).text(firstCard.attributes[attribute]);
 				}
 				
 				this.firstCardHtml.addClass('flipped');
+
+				//binds the attributes clicks
+				this.bindCardEvents(this.firstCardHtml)
 			}
+
+			this.firstCardHtml.addClass('flipped');
+		},
+
+		bindCardEvents: function (card) {
+			var that = this;
+
+			this.attributeClicked = false;
+
+			card.find('[isattr="true"]').on('click', function (e) {
+				var src = e.target;
+
+				//avoid multiple clicks in different attributes
+				if (!that.attributeClicked) {
+					that.attributeClicked = true;
+
+					$(window).trigger('attributeClicked', {
+						attribute: src.className,
+						val: src.innerText
+					});
+				}
+			});
+		},
+
+		removeFlipped: function () {
+			var that = this;
+
+			//removes the attributes events to avoid memody leak
+			this.firstCardHtml.find('[isattr="true"]').off('click');
+			this.firstCardHtml.remove();
 		},
 		
 		bindEvents : function () {

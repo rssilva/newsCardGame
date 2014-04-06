@@ -8,6 +8,7 @@ var GameMaster = function () {
 			this.computer.init();
 			
 			this.loadCards('js/cardsList.json');
+			this.bindEvents();
 		},
 		
 		loadCards : function (_url) {
@@ -43,9 +44,44 @@ var GameMaster = function () {
 					this.computer.deck.push(_shuffledDeck[counter]);
 				}
 			}
-			
+
 			this.player.renderDeck();
 			this.computer.renderDeck();
+		},
+
+		onAttributeClicked: function (data) {
+			var pcData = this.computer.flipFirstCard(), //get all attributes
+			playerData = data.val;
+
+			pcData = pcData[data.attribute]; //get all the chosen attribute
+
+			this.compareData(playerData, pcData);
+		},
+
+		compareData: function (playerData, pcData) {
+			if (playerData > pcData) {
+
+			} else if (playerData === pcData) {
+
+			} else {
+
+			}
+
+			this.removeFlipped();
+		},
+
+		removeFlipped: function () {
+			this.player.removeFlipped();
+			this.computer.removeFlipped();
+		},
+
+		bindEvents: function () {
+			var that = this;
+
+			//triggered on Player object to pass selected attribute and value
+			$(window).on('attributeClicked', function (e, data) {
+				that.onAttributeClicked(data);
+			});
 		}
 	}
 };

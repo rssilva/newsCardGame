@@ -24,7 +24,38 @@ var Computer = function () {
 				li.append(frontDiv, coverDiv.clone());
 				ol.append(li);
 			}
+
 			this.deckHtml.append(ol.children());
-		}
+		},
+
+
+		flipFirstCard : function () {
+			var listSize 	= this.deckHtml.find('li').length,
+				firstCard 	= this.deck[listSize - 1],
+				values    	= {},
+				attribute;
+
+			this.firstCardHtml = this.deckHtml.find('li:last-child');
+
+			if (!this.firstCardHtml.hasClass('flipped')) {
+				this.firstCardHtml = this.deckHtml.find('li:last-child');
+				this.firstCardHtml.find('.card-name').text(firstCard.name);
+
+				for (attribute in firstCard.attributes) {
+					this.firstCardHtml.find('.' + attribute).text(firstCard.attributes[attribute]);
+					values[attribute] = firstCard.attributes[attribute];
+				}
+				
+				this.firstCardHtml.addClass('flipped');
+			}
+
+			this.firstCardHtml.addClass('flipped');
+
+			return values;
+		},
+
+		removeFlipped: function () {
+			this.firstCardHtml.remove();
+		},
 	}
 }
