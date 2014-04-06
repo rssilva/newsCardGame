@@ -6,8 +6,9 @@ var Computer = function () {
 		},
 		
 		renderDeck : function () {
-			var deckSize = this.deck.length,
-				coverDiv = $('<div class="cover"></div>'),
+			var deckSize 	= this.deck.length,
+				ol 			= $('<ol></ol>'),
+				coverDiv 	= $('<div class="cover"></div>'),
 				frontDiv, counter, li, span, attribute;
 			
 			for (counter = 0; counter < deckSize; counter++) {
@@ -21,8 +22,9 @@ var Computer = function () {
 				}
 				
 				li.append(frontDiv, coverDiv.clone());
-				this.deckHtml.append(li);
+				ol.append(li);
 			}
+			this.deckHtml.append(ol.children());
 		}
 	}
 }
