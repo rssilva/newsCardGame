@@ -85,7 +85,8 @@ var Player = function () {
 		bindEvents : function () {
 			var player = this;
 		
-			this.deckHtml.on('click', function () {
+			$('#start').on('click', function () {
+				this.remove();
 				player.flipFirstCard();
 			});
 		}
