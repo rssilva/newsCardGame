@@ -14,13 +14,15 @@ var Computer = function () {
 			for (counter = 0; counter < deckSize; counter++) {
 				li = $('<li class="card card-' + counter + '"></li>')
 				frontDiv = $('<div class="front"></div>');
-				frontDiv.append($('<span class="card-name"></span>').text('???'));
+				frontInnerDiv = $('<div class="front-inner"></div>');
+				frontInnerDiv.append($('<span class="card-name"></span>').text('???'));
 				
 				for (attribute in this.deck[counter].attributes) {
-					span = $('<span class="' + attribute + '"></span>').text('???');
-					frontDiv.append(span);
+					span = $('<span isattr="true" class="' + attribute + '"></span>').text('???');
+					frontInnerDiv.append(span);
 				}
 				
+				frontDiv.append(frontInnerDiv);
 				li.append(frontDiv, coverDiv.clone());
 				ol.append(li);
 			}

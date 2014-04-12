@@ -96,9 +96,9 @@ var GameMaster = function () {
 			this.statistics.push(roundData);
 
 			//TODO: solve this like a real developer
-			setTimeout(function () {
+			/*setTimeout(function () {
 				that.removeFlipped();
-			}, 1000);
+			}, 5000);*/
 		},
 
 		removeFlipped: function () {
