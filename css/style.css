@@ -4,6 +4,11 @@ html, body {
 	background: green;
 }
 
+h1 {
+	color: #fff;
+	text-align: center;
+}
+
 .deck {
 	position: absolute;
 	width: 10%;
@@ -113,4 +118,14 @@ html, body {
 
 .flipped .cover {
 	transform: rotateY(-180deg);
+}
+
+#start {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	margin: 0 auto;
+	display: block;
+	width: auto;
 }
