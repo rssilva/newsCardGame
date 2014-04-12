@@ -1,63 +1,69 @@
 {
     "availableCards": [
         {
-            "name": "myName1",
+            "name": "Nome1",
+            "uriName": "sample-",
 			"attributes": {
-				"strength": 3,
-				"speed": 6,
-				"agility": 10,
-				"height": 180,
-				"weight": 120
+				"aceleração": 3,
+				"chute": 6,
+				"assistencia": 10,
+				"drible": 180,
+				"marcação": 120
 			}
         },
         {
-            "name": "myName2",
+            "name": "Nome2",
+			"uriName": "sample-",
 			"attributes": {
-				"strength": 10,
-				"speed": 2,
-				"agility": 5,
-				"height": 210,
-				"weight": 150
+				"aceleração": 10,
+				"chute": 2,
+				"assistencia": 5,
+				"drible": 210,
+				"marcação": 150
 			}
         },
 		{
-            "name": "myName3",
+            "name": "Nome3",
+			"uriName": "sample-",
 			"attributes": {
-				"strength": 7,
-				"speed": 2,
-				"agility": 4,
-				"height": 170,
-				"weight": 120
+				"aceleração": 7,
+				"chute": 2,
+				"assistencia": 4,
+				"drible": 170,
+				"marcação": 120
 			}
         },
 		{
-            "name": "myName4",
+            "name": "Nome4",
+			"uriName": "sample-",
 			"attributes": {
-				"strength": 8,
-				"speed": 6,
-				"agility": 4,
-				"height": 150,
-				"weight": 70
+				"aceleração": 8,
+				"chute": 6,
+				"assistencia": 4,
+				"drible": 150,
+				"marcação": 70
 			}
         },
 		{
-            "name": "myName5",
+            "name": "Nome5",
+			"uriName": "sample-",
 			"attributes": {
-				"strength": 1,
-				"speed": 7,
-				"agility": 6,
-				"height": 180,
-				"weight": 95
+				"aceleração": 1,
+				"chute": 7,
+				"assistencia": 6,
+				"drible": 180,
+				"marcação": 95
 			}
         },
 		{
-            "name": "myName6",
+            "name": "Nome6",
+			"uriName": "sample-",
 			"attributes": {
-				"strength": 4,
-				"speed": 7,
-				"agility": 6,
-				"height": 190,
-				"weight": 100
+				"aceleração": 4,
+				"chute": 7,
+				"assistencia": 6,
+				"drible": 190,
+				"marcação": 100
 			}
         }
     ]

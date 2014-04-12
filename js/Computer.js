@@ -15,10 +15,11 @@ var Computer = function () {
 				li = $('<li class="card card-' + counter + '"></li>')
 				frontDiv = $('<div class="front"></div>');
 				frontInnerDiv = $('<div class="front-inner"></div>');
-				frontInnerDiv.append($('<span class="card-name"></span>').text('???'));
+				frontInnerDiv.append($('<span class="avatar"></span>'));
+				frontInnerDiv.append($('<span class="card-name"></span>').html('???'));
 				
 				for (attribute in this.deck[counter].attributes) {
-					span = $('<span isattr="true" class="' + attribute + '"></span>').text('???');
+					span = $('<span data-attribute="' + attribute + '" class="attribute ' + attribute + '"></span>').html('???');
 					frontInnerDiv.append(span);
 				}
 				
@@ -30,7 +31,6 @@ var Computer = function () {
 			this.deckHtml.append(ol.children());
 		},
 
-
 		flipFirstCard : function () {
 			var listSize 	= this.deckHtml.find('li').length,
 				firstCard 	= this.deck[listSize - 1],
@@ -39,12 +39,13 @@ var Computer = function () {
 
 			this.firstCardHtml = this.deckHtml.find('li:last-child');
 
-			if (!this.firstCardHtml.hasClass('flipped')) {
+			if (firstCard && !this.firstCardHtml.hasClass('flipped')) {
 				this.firstCardHtml = this.deckHtml.find('li:last-child');
-				this.firstCardHtml.find('.card-name').text(firstCard.name);
+				this.firstCardHtml.find('.avatar').css('background-image', 'url(img/' + firstCard.uriName + 'computer.png');
+				this.firstCardHtml.find('.card-name').html(firstCard.name);
 
 				for (attribute in firstCard.attributes) {
-					this.firstCardHtml.find('.' + attribute).text(firstCard.attributes[attribute]);
+					this.firstCardHtml.find('.' + attribute).html(firstCard.attributes[attribute]);
 					values[attribute] = firstCard.attributes[attribute];
 				}
 				

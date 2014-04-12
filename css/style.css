@@ -48,6 +48,7 @@ h1 {
 	width: 100%;
 	height: 100%;
 	transition: all 1s;
+	overflow: hidden;
 }
 
 #player .card {
@@ -68,33 +69,70 @@ h1 {
 .card span {
 	display: block;
 	font-family: Arial;
-	font-size: 11px;
-	padding: 2px 10px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.card .avatar {
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 231px;
 }
 
 .card .card-name {
 	text-align: center;
-	font-size: 15px;
-	margin-bottom: 10px;
+	font-size: 14px;
+	margin: 10px 0;
+	color: #fff;
+	background: url("../img/sample-card-name.png") no-repeat center top;
+	height: 23px;
+	line-height: 20px;
 }
 
-.card span:not(.card-name) {
+.card .attribute {
 	text-align: right;
-	background: #ccf;
-	margin: 5px 0;
+	padding-right: 10px;
+	background: #667e79;
+	color: #ece8dd;
+	margin: 2px 10px;
+	position: relative;
+	overflow: hidden;
 }
 
-#player .card span:not(.card-name) {
+#player .card .attribute {
 	cursor: pointer;
 }
 
-.card span:not(.card-name):before {
-	content: attr(class);
+.card .attribute:before {
+	content: attr(data-attribute);
 	float: left;
+	text-align: left;
+	text-indent: 10px;
+	background: #c0d7c8;
+	color: #667e79;
+	width: 100px;
+	border-right: 10px solid #ece8dd;
 }
 
-#player .card span:not(.card-name):hover {
-	background: #bbf;
+.card .attribute:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -93px;
+	right: 0;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 100px 100px 0;
+	border-color: transparent #ece8dd transparent transparent;
+}
+
+#player .card .attribute:hover {
+	background: #41504d;
+}
+
+#player .card .attribute:hover:before {
+	background: #a6bbad;
 }
 
 .card .front {
@@ -129,7 +167,7 @@ h1 {
 
 .flipped {
 	width: 180px;
-	height: 365px;
+	height: 370px;
 	bottom: 65px;
 	z-index: 2;
 }

@@ -17,10 +17,11 @@ var Player = function () {
 				li = $('<li class="card card-' + counter + '"></li>')
 				frontDiv = $('<div class="front"></div>');
 				frontInnerDiv = $('<div class="front-inner"></div>');
-				frontInnerDiv.append($('<span class="card-name"></span>').text('???'));
+				frontInnerDiv.append($('<span class="avatar"></span>'));
+				frontInnerDiv.append($('<span class="card-name"></span>').html('???'));
 				
 				for (attribute in this.deck[counter].attributes) {
-					span = $('<span isattr="true" class="' + attribute + '"></span>').text('???');
+					span = $('<span data-attribute="' + attribute + '" class="attribute ' + attribute + '"></span>').html('???');
 					frontInnerDiv.append(span);
 				}
 				
@@ -35,16 +36,18 @@ var Player = function () {
 		flipFirstCard : function () {
 			var listSize = this.deckHtml.find('li').length,
 				firstCard = this.deck[listSize - 1],
-				attribute;
+				attribute,
+				bgImage;
 
 			this.firstCardHtml = this.deckHtml.find('li:last-child');
 
-			if (firstCard && !this.firstCardHtml.hasClass('flipped')) {
+			if (firstCard && !this.firstCardHtml.hasClass('flipped')) {				
 				this.firstCardHtml = this.deckHtml.find('li:last-child');
-				this.firstCardHtml.find('.card-name').text(firstCard.name);
+				this.firstCardHtml.find('.avatar').css('background-image', 'url(img/' + firstCard.uriName + 'player.png');
+				this.firstCardHtml.find('.card-name').html(firstCard.name);
 
 				for (attribute in firstCard.attributes) {
-					this.firstCardHtml.find('.' + attribute).text(firstCard.attributes[attribute]);
+					this.firstCardHtml.find('.' + attribute).html(firstCard.attributes[attribute]);
 				}
 				
 				this.firstCardHtml.addClass('flipped');
@@ -61,7 +64,7 @@ var Player = function () {
 
 			this.attributeClicked = false;
 
-			card.find('[isattr="true"]').on('click', function (e) {
+			card.find('.attribute').on('click', function (e) {
 				var src = e.target;
 
 				//avoid multiple clicks in different attributes
@@ -85,7 +88,7 @@ var Player = function () {
 			var that = this;
 
 			//removes the attributes events to avoid memory leak
-			this.firstCardHtml.find('[isattr="true"]').off('click');
+			this.firstCardHtml.find('.attribute').off('click');
 			this.firstCardHtml.remove();
 		},
 		
