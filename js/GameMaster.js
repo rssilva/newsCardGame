@@ -1,6 +1,12 @@
 var GameMaster = function () {
 	return {
 		init : function () {
+			this.statistics = [];
+			this.score = {
+				player: 0,
+				pc: 0
+			}
+
 			this.player = new Player();			
 			this.player.init();
 			
@@ -49,25 +55,50 @@ var GameMaster = function () {
 			this.computer.renderDeck();
 		},
 
-		onAttributeClicked: function (data) {
-			var pcData = this.computer.flipFirstCard(), //get all attributes
-			playerData = data.val;
+		onAttributeClicked: function (playerData) {
+			var pcData = this.computer.flipFirstCard(); //get all attributes
 
-			pcData = pcData[data.attribute]; //get all the chosen attribute
-
-			this.compareData(playerData, pcData);
+			this.compareData(playerData, pcData, playerData.attribute);
 		},
 
-		compareData: function (playerData, pcData) {
-			if (playerData > pcData) {
+		compareData: function (playerData, pcData, attr) {
+			var that 		= this,
+				roundData,
+				result		= '';
+				playerValue = playerData.val,
+				pcValue 	= pcData[attr];
 
-			} else if (playerData === pcData) {
-
+			if (playerValue > pcValue) {
+				result = 'won';
+				this.score.player++;
+			} else if (playerValue == pcValue) {
+				result = 'draw';
 			} else {
-
+				result = 'loose';
+				this.score.pc++;
 			}
 
-			this.removeFlipped();
+			//adding all round data to an object will allow us
+			//to have 'match statistics' for a future feature :)
+			roundData = {
+				playerData	: playerData,
+				pcData		: pcData,
+				attr 		: attr,
+				result 		: result
+			};
+
+			this.onRoundEnd(roundData);
+		},
+
+		onRoundEnd: function (roundData) {
+			var that = this;
+			
+			this.statistics.push(roundData);
+
+			//TODO: solve this like a real developer
+			setTimeout(function () {
+				that.removeFlipped();
+			}, 1000);
 		},
 
 		removeFlipped: function () {

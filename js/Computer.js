@@ -51,6 +51,8 @@ var Computer = function () {
 
 			this.firstCardHtml.addClass('flipped');
 
+			values.name = this.firstCardHtml.find('.card-name').text();
+
 			return values;
 		},
 

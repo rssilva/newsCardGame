@@ -63,15 +63,20 @@ var Player = function () {
 				var src = e.target;
 
 				//avoid multiple clicks in different attributes
-				if (!that.attributeClicked) {
-					that.attributeClicked = true;
-
-					$(window).trigger('attributeClicked', {
-						attribute: src.className,
-						val: src.innerText
-					});
-				}
+				that.onAtrributeClicked(src);
 			});
+		},
+
+		onAtrributeClicked: function (src) {
+			if (!this.attributeClicked) {
+				this.attributeClicked = true;
+
+				$(window).trigger('attributeClicked', {
+					name: $(src.parentNode).find('.card-name').text(),
+					attribute: src.className,
+					val: src.innerText
+				});
+			}
 		},
 
 		removeFlipped: function () {
