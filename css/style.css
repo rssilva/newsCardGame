@@ -6,6 +6,8 @@ html, body {
 	background: green;
 }
 
+.display-none {display: none}
+
 #wrapper {
 	height: 100%;
 	width: 800px;
@@ -201,4 +203,20 @@ h1 {
 	position: absolute;
 	left: 50%;
 	margin-left: -50px;
+}
+
+#game-mode-modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	width: 300px;
+	height: 200px;
+	background-color: #00AC00; /*just kidding, this value is awful*/
+	margin: -100px 0 0 -150px;
+	box-shadow: 5px 5px;
+}
+
+.modal-option {
+	cursor: pointer;
 }
