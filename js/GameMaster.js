@@ -1,3 +1,11 @@
+var dictionary = {
+	"aceleracao"	: "acelera&#231;&#227;o",
+	"chute"			: "chute",
+	"assistencia"	: "assist&#234;ncia",
+	"drible"		: "drible",
+	"marcacao"		: "marca&#231;&#227;o"
+};
+
 var GameMaster = function () {
 	return {
 		init : function () {

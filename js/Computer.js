@@ -19,7 +19,7 @@ var Computer = function () {
 				frontInnerDiv.append($('<span class="card-name"></span>').html('???'));
 				
 				for (attribute in this.deck[counter].attributes) {
-					span = $('<span data-attribute="' + attribute + '" class="attribute ' + attribute + '"></span>').html('???');
+					span = $('<span data-attribute="' + dictionary[attribute] + '" class="attribute ' + attribute + '"></span>').html('???');
 					frontInnerDiv.append(span);
 				}
 				

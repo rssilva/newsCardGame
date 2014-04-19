@@ -4,66 +4,66 @@
             "name": "Nome1",
             "uriName": "sample-",
 			"attributes": {
-				"aceleração": 3,
+				"aceleracao": 3,
 				"chute": 6,
 				"assistencia": 10,
 				"drible": 180,
-				"marcação": 120
+				"marcacao": 120
 			}
         },
         {
             "name": "Nome2",
 			"uriName": "sample-",
 			"attributes": {
-				"aceleração": 10,
+				"aceleracao": 10,
 				"chute": 2,
 				"assistencia": 5,
 				"drible": 210,
-				"marcação": 150
+				"marcacao": 150
 			}
         },
 		{
             "name": "Nome3",
 			"uriName": "sample-",
 			"attributes": {
-				"aceleração": 7,
+				"aceleracao": 7,
 				"chute": 2,
 				"assistencia": 4,
 				"drible": 170,
-				"marcação": 120
+				"marcacao": 120
 			}
         },
 		{
             "name": "Nome4",
 			"uriName": "sample-",
 			"attributes": {
-				"aceleração": 8,
+				"aceleracao": 8,
 				"chute": 6,
 				"assistencia": 4,
 				"drible": 150,
-				"marcação": 70
+				"marcacao": 70
 			}
         },
 		{
             "name": "Nome5",
 			"uriName": "sample-",
 			"attributes": {
-				"aceleração": 1,
+				"aceleracao": 1,
 				"chute": 7,
 				"assistencia": 6,
 				"drible": 180,
-				"marcação": 95
+				"marcacao": 95
 			}
         },
 		{
             "name": "Nome6",
 			"uriName": "sample-",
 			"attributes": {
-				"aceleração": 4,
+				"aceleracao": 4,
 				"chute": 7,
 				"assistencia": 6,
 				"drible": 190,
-				"marcação": 100
+				"marcacao": 100
 			}
         }
     ]
