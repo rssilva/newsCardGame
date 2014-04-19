@@ -95,10 +95,10 @@ var Player = function () {
 		bindEvents : function () {
 			var player = this;
 		
-			$('#start').on('click', function () {
-				this.remove();
-				player.flipFirstCard();
-			});
+			// $('#start').on('click', function () {
+			// 	this.remove();
+			// 	player.flipFirstCard();
+			// });
 		}
 	}
 }

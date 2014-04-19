@@ -15,6 +15,15 @@ var GameMaster = function () {
 				pc: 0
 			}
 
+			this.instantiateStartModal();
+
+			this.currentRound = 0;
+
+			this.gameMode = new GameModeModule({
+				gameMaster: this
+			});
+			this.gameMode.init();
+
 			this.player = new Player();			
 			this.player.init();
 			
@@ -23,6 +32,15 @@ var GameMaster = function () {
 			
 			this.loadCards('js/cardsList.json');
 			this.bindEvents();
+		},
+
+		instantiateStartModal: function () {
+			this.startModal = new StartModal({
+				$el: $('#game-mode-modal')
+			});
+
+			this.startModal.init();
+			this.startModal.open();
 		},
 		
 		loadCards : function (_url) {
@@ -99,14 +117,24 @@ var GameMaster = function () {
 		},
 
 		onRoundEnd: function (roundData) {
-			var that = this;
+			var that = this,
+				gameStatus;
 			
+			this.currentRound++;
 			this.statistics.push(roundData);
 
-			//TODO: solve this like a real developer
-			/*setTimeout(function () {
-				that.removeFlipped();
-			}, 5000);*/
+			gameStatus = this.gameMode.isOver();
+
+			if (gameStatus.isOver) {
+				console.log('acabou o jogo!!!', this.score)
+			} else {
+				//TODO: solve this like a real developer
+				setTimeout(function () {
+					that.removeFlipped();
+					that.player.flipFirstCard();
+				}, 1000);
+			}
+
 		},
 
 		removeFlipped: function () {
@@ -120,6 +148,12 @@ var GameMaster = function () {
 			//triggered on Player object to pass selected attribute and value
 			$(window).on('attributeClicked', function (e, data) {
 				that.onAttributeClicked(data);
+			});
+
+			//triggered on StartModal to choose the game mode
+			$(window).on('gameModeChoosed', function (e, data) {
+				that.gameMode.setMode(data.mode);
+				that.player.flipFirstCard();
 			});
 		}
 	}
