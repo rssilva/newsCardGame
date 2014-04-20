@@ -93,7 +93,7 @@ var GameMaster = function () {
 				result		= '';
 				playerValue = playerData.val,
 				pcValue 	= pcData[attr];
-
+			
 			if (playerValue > pcValue) {
 				result = 'won';
 				this.score.player++;

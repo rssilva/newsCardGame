@@ -21,7 +21,7 @@ var Player = function () {
 				frontInnerDiv.append($('<span class="card-name"></span>').html('???'));
 				
 				for (attribute in this.deck[counter].attributes) {
-					span = $('<span data-attribute="' + dictionary[attribute] + '" class="attribute ' + attribute + '"></span>').html('???');
+					span = $('<span data-attr="' + attribute + '" data-attribute="' + dictionary[attribute] + '" class="attribute ' + attribute + '"></span>').html('???');
 					frontInnerDiv.append(span);
 				}
 				
@@ -77,9 +77,9 @@ var Player = function () {
 				this.attributeClicked = true;
 
 				$(window).trigger('attributeClicked', {
-					name: $(src.parentNode).find('.card-name').text(),
-					attribute: src.className,
-					val: src.innerText
+					name 		: $(src.parentNode).find('.card-name').text(),
+					attribute 	: $(src).data('attr'),
+					val 		: src.innerText
 				});
 			}
 		},
