@@ -124,7 +124,7 @@ var GameMaster = function () {
 			this.statistics.push(roundData);
 
 			gameStatus = this.gameMode.isOver();
-
+			
 			if (gameStatus.isOver) {
 				console.log('acabou o jogo!!!', this.score)
 			} else {
