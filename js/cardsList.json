@@ -1,69 +1,387 @@
 {
     "availableCards": [
         {
-            "name": "Nome1",
+            "name": "Van Persie",
             "uriName": "sample-",
 			"attributes": {
-				"aceleracao": 3,
-				"chute": 6,
-				"assistencia": 10,
-				"drible": 180,
-				"marcacao": 120
+				"matches"	: 47,
+				"goals"		: 30,
+				"titulos"	: 9,
+				"ataque"	: 8.9,
+				"defesa"	: 4.1,
+				"selecao"	: 9.4
 			}
         },
         {
-            "name": "Nome2",
-			"uriName": "sample-",
+            "name": "Messi",
+            "uriName": "sample-",
 			"attributes": {
-				"aceleracao": 10,
-				"chute": 2,
-				"assistencia": 5,
-				"drible": 210,
-				"marcacao": 150
+				"matches"	: 84,
+				"goals"		: 37,
+				"titulos"	: 22,
+				"ataque"	: 9.9,
+				"defesa"	: 4.9,
+				"selecao"	: 9.6
+			}
+        },
+        {
+            "name": "Ribéry",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 81,
+				"goals"		: 1,
+				"titulos"	: 13,
+				"ataque"	: 8.5,
+				"defesa"	: 6.4,
+				"selecao"	: 7.9
+			}
+        },
+        {
+            "name": "Kompany",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 57,
+				"goals"		: 4,
+				"titulos"	: 6,
+				"ataque"	: 5.1,
+				"defesa"	: 8.1,
+				"selecao"	: 6.6
+			}
+        },
+        {
+            "name": "Bryan Ruiz",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 62,
+				"goals"		: 12,
+				"titulos"	: 8,
+				"ataque"	: 9.6,
+				"defesa"	: 5.8,
+				"selecao"	: 8
+			}
+        },        
+        {
+            "name": "Rafael Márquez",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 79,
+				"goals"		: 10,
+				"titulos"	: 13,
+				"ataque"	: 5.5,
+				"defesa"	: 6.7,
+				"selecao"	: 5.8
 			}
         },
 		{
-            "name": "Nome3",
-			"uriName": "sample-",
+            "name": "Shaqiri",
+            "uriName": "sample-",
 			"attributes": {
-				"aceleracao": 7,
-				"chute": 2,
-				"assistencia": 4,
-				"drible": 170,
-				"marcacao": 120
+				"matches"	: 31,
+				"goals"		: 8,
+				"titulos"	: 11,
+				"ataque"	: 7.1,
+				"defesa"	: 6.1,
+				"selecao"	: 6.3
+			}
+        },        
+        {
+            "name": "Cahill",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 67,
+				"goals"		: 31,
+				"titulos"	: 1,
+				"ataque"	: 6.5,
+				"defesa"	: 5.7,
+				"selecao"	: 5.4
 			}
         },
 		{
-            "name": "Nome4",
-			"uriName": "sample-",
+            "name": "Falcao Garcia",
+            "uriName": "sample-",
 			"attributes": {
-				"aceleracao": 8,
-				"chute": 6,
-				"assistencia": 4,
-				"drible": 150,
-				"marcacao": 70
+				"matches"	: 50,
+				"goals"		: 20,
+				"titulos"	: 10,
+				"ataque"	: 8.9,
+				"defesa"	: 3.8,
+				"selecao"	: 7.7
+			}
+        },        
+        {
+            "name": "Modric",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 73,
+				"goals"		: 8,
+				"titulos"	: 7,
+				"ataque"	: 7.3,
+				"defesa"	: 6.6,
+				"selecao"	: 7.3
+			}
+        },        
+		{
+            "name": "Eto'o",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 114,
+				"goals"		: 55,
+				"titulos"	: 19,
+				"ataque"	: 7.8,
+				"defesa"	: 4.1,
+				"selecao"	: 6.3
+			}
+        },        
+        {
+            "name": "Edin Dzeko",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 58,
+				"goals"		: 33,
+				"titulos"	: 5,
+				"ataque"	: 7.8,
+				"defesa"	: 4.6,
+				"selecao"	: 5.7
 			}
         },
 		{
-            "name": "Nome5",
-			"uriName": "sample-",
+            "name": "Suárez",
+            "uriName": "sample-",
 			"attributes": {
-				"aceleracao": 1,
-				"chute": 7,
-				"assistencia": 6,
-				"drible": 180,
-				"marcacao": 95
+				"matches"	: 77,
+				"goals"		: 38,
+				"titulos"	: 6,
+				"ataque"	: 9.6,
+				"defesa"	: 5.8,
+				"selecao"	: 8
+			}
+        },        
+        {
+            "name": "Iniesta",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 95,
+				"goals"		: 10,
+				"titulos"	: 19,
+				"ataque"	: 8.5,
+				"defesa"	: 6.6,
+				"selecao"	: 9.5
 			}
         },
 		{
-            "name": "Nome6",
-			"uriName": "sample-",
+            "name": "Vidal",
+            "uriName": "sample-",
 			"attributes": {
-				"aceleracao": 4,
-				"chute": 7,
-				"assistencia": 6,
-				"drible": 190,
-				"marcacao": 100
+				"matches"	: 53,
+				"goals"		: 8,
+				"titulos"	: 6,
+				"ataque"	: 7.8,
+				"defesa"	: 7.4,
+				"selecao"	: 7.4
+			}
+        },        
+        {
+            "name": "Pirlo",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 108,
+				"goals"		: 13,
+				"titulos"	: 15,
+				"ataque"	: 7.6,
+				"defesa"	: 7.1,
+				"selecao"	: 8.8
+			}
+        },
+        {
+            "name": "Kogawa",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 54,
+				"goals"		: 16,
+				"titulos"	: 6,
+				"ataque"	: 7,
+				"defesa"	: 6,
+				"selecao"	: 6.1
+			}
+        },
+        {
+            "name": "Newer",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 45,
+				"goals"		: 0,
+				"titulos"	: 10,
+				"ataque"	: 0.9,
+				"defesa"	: 9.4,
+				"selecao"	: 9.2
+			}
+        },
+        {
+            "name": "Noboa",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 35,
+				"goals"		: 1,
+				"titulos"	: 4,
+				"ataque"	: 5.2,
+				"defesa"	: 6.3,
+				"selecao"	: 5.7
+			}
+        },
+        {
+            "name": "Donovan",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 154,
+				"goals"		: 57,
+				"titulos"	: 10,
+				"ataque"	: 7,
+				"defesa"	: 5.8,
+				"selecao"	: 6.7
+			}
+        },
+        {
+            "name": "Tourè",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 83,
+				"goals"		: 14,
+				"titulos"	: 13,
+				"ataque"	: 7.8,
+				"defesa"	: 8.1,
+				"selecao"	: 7
+			}
+        },
+        {
+            "name": "Rooney",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 85,
+				"goals"		: 38,
+				"titulos"	: 15,
+				"ataque"	: 8.7,
+				"defesa"	: 5.5,
+				"selecao"	: 7.6
+			}
+        },
+        {
+            "name": "Neymar",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 47,
+				"goals"		: 30,
+				"titulos"	: 9,
+				"ataque"	: 9.4,
+				"defesa"	: 4.1,
+				"selecao"	: 9.4
+			}
+        },
+        {
+            "name": "Ronaldo",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 110,
+				"goals"		: 49,
+				"titulos"	: 12,
+				"ataque"	: 9.8,
+				"defesa"	: 4.6,
+				"selecao"	: 8.2
+			}
+        },
+        {
+            "name": "Nekounam",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 92,
+				"goals"		: 29,
+				"titulos"	: 2,
+				"ataque"	: 5.8,
+				"defesa"	: 5.3,
+				"selecao"	: 4.5
+			}
+        },
+        {
+            "name": "Mikel",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 40,
+				"goals"		: 4,
+				"titulos"	: 10,
+				"ataque"	: 5.3,
+				"defesa"	: 7.4,
+				"selecao"	: 4.9
+			}
+        },
+        {
+            "name": "Bengston",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 41,
+				"goals"		: 19,
+				"titulos"	: 0,
+				"ataque"	: 6.3,
+				"defesa"	: 3.3,
+				"selecao"	: 4.2
+			}
+        },
+        {
+            "name": "Samedov",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 14,
+				"goals"		: 3,
+				"titulos"	: 2,
+				"ataque"	: 6,
+				"defesa"	: 6,
+				"selecao"	: 5.8
+			}
+        },
+        {
+            "name": "Feghouli",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 17,
+				"goals"		: 5,
+				"titulos"	: 0,
+				"ataque"	: 6.8,
+				"defesa"	: 5.7,
+				"selecao"	: 5.9
+			}
+        },
+        {
+            "name": "Heung-min Son",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 24,
+				"goals"		: 6,
+				"titulos"	: 0,
+				"ataque"	: 6.8,
+				"defesa"	: 4.5,
+				"selecao"	: 5.7
+			}
+        },
+        {
+            "name": "Asamoah Gyan",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 78,
+				"goals"		: 39,
+				"titulos"	: 3,
+				"ataque"	: 7.3,
+				"defesa"	: 4.7,
+				"selecao"	: 5.6
+			}
+        },
+        {
+            "name": "Papastathopoulos",
+            "uriName": "sample-",
+			"attributes": {
+				"matches"	: 46,
+				"goals"		: 0,
+				"titulos"	: 2,
+				"ataque"	: 3.7,
+				"defesa"	: 6.9,
+				"selecao"	: 4.9
 			}
         }
     ]

@@ -1,9 +1,10 @@
 var dictionary = {
-	"aceleracao"	: "acelera&#231;&#227;o",
-	"chute"			: "chute",
-	"assistencia"	: "assist&#234;ncia",
-	"drible"		: "drible",
-	"marcacao"		: "marca&#231;&#227;o"
+	"matches"		: "Partidas (sele&#231;&#227;o)",
+	"goals"			: "Gols (sele&#231;&#227;o)",
+	"titulos"		: "T&#205;tulos",
+	"ataque"		: "Força de Ataque",
+	"defesa"		: "Força de Defesa",
+	"selecao"		: "Força da Sele&#231;&#227;o"
 };
 
 var GameMaster = function () {
