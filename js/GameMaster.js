@@ -125,9 +125,10 @@ var GameMaster = function () {
 			this.statistics.push(roundData);
 
 			gameStatus = this.gameMode.isOver();
-			
+
 			if (gameStatus.isOver) {
 				console.log('acabou o jogo!!!', this.score)
+				alert('APONTA O ÁRBITRO!!! Jogador: ' + this.score.player + ' Computador: ' + this.score.pc)
 			} else {
 				//TODO: solve this like a real developer
 				setTimeout(function () {
