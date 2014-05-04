@@ -32,10 +32,21 @@ var Player = function () {
 
 			this.deckHtml.append(ol.children());
 		},
+
+		getPlayerClass: function (name) {
+			var playerClass = name.toLowerCase();
+
+			playerClass = playerClass.replace(/ /g, '-');
+
+			playerClass = playerClass.replace(/[^a-z ]/g, '');
+
+			return playerClass
+		},
 		
 		flipFirstCard : function () {
 			var listSize = this.deckHtml.find('li').length,
 				firstCard = this.deck[listSize - 1],
+				playerClass,
 				attribute,
 				bgImage;
 
@@ -43,7 +54,10 @@ var Player = function () {
 
 			if (firstCard && !this.firstCardHtml.hasClass('flipped')) {				
 				this.firstCardHtml = this.deckHtml.find('li:last-child');
-				this.firstCardHtml.find('.avatar').css('background-image', 'url(img/' + firstCard.uriName + 'player.png');
+				
+				playerClass = this.getPlayerClass(firstCard.name);
+
+				this.firstCardHtml.find('.avatar').addClass(playerClass + ' left-player');
 				this.firstCardHtml.find('.card-name').html(firstCard.name);
 
 				for (attribute in firstCard.attributes) {
