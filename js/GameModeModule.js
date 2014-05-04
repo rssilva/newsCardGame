@@ -21,6 +21,7 @@ var GameModeModule = function (options) {
 			var list = {
 				definedRounds: {
 					init: function (options) {
+						this.rounds 	= options.rounds || 5;
 						this.gameMaster = options.gameMaster;
 					},
 
