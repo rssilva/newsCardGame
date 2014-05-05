@@ -17,6 +17,7 @@ var GameMaster = function () {
 			}
 
 			this.instantiateStartModal();
+			this.configRoundModal();
 
 			this.currentRound = 0;
 
@@ -42,6 +43,11 @@ var GameMaster = function () {
 
 			this.startModal.init();
 			this.startModal.open();
+		},
+
+		configRoundModal: function () {
+			this.roundModal = roundModal;
+			this.roundModal.bindEvents();
 		},
 		
 		loadCards : function (_url) {
@@ -131,12 +137,20 @@ var GameMaster = function () {
 				alert('APONTA O ÁRBITRO!!! Jogador: ' + this.score.player + ' Computador: ' + this.score.pc)
 			} else {
 				//TODO: solve this like a real developer
-				setTimeout(function () {
-					that.removeFlipped();
-					that.player.flipFirstCard();
-				}, 1000);
+				
+				this.roundEnded = true;
+				this.roundModal.open();
 			}
 
+		},
+
+		onRoundConfirmed: function () {
+			if (this.roundEnded) {
+				this.removeFlipped();
+				this.player.flipFirstCard();
+
+				this.roundEnded = false;
+			}
 		},
 
 		removeFlipped: function () {
@@ -156,6 +170,10 @@ var GameMaster = function () {
 			$(window).on('gameModeChoosed', function (e, data) {
 				that.gameMode.setMode(data.mode);
 				that.player.flipFirstCard();
+			});
+
+			$(window).on('confirmRound', function () {
+				that.onRoundConfirmed();
 			});
 		}
 	}
