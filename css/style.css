@@ -79,6 +79,7 @@ h1 {
 	background-repeat: no-repeat;
 	background-position: center top;
 	height: 231px;
+	margin-top: 10px;
 }
 
 .card .card-name {
@@ -88,6 +89,8 @@ h1 {
 	color: #fff;
 	background: url("../img/card-names-spr.png") no-repeat;
 	height: 23px;
+	width: 180px;
+	margin-left: auto;
 	line-height: 20px;
 }
 
@@ -149,7 +152,7 @@ h1 {
 .card .front-inner {
 	border: 5px solid #ccc6bd;
 	background: #ece8dd;
-	height: 97%;
+	height: 98%;
 	border-radius: 10px;
 }
 
@@ -168,8 +171,8 @@ h1 {
 }
 
 .flipped {
-	width: 180px;
-	height: 370px;
+	width: 194px;
+	height: 375px;
 	bottom: 65px;
 	z-index: 2;
 }
