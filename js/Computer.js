@@ -51,10 +51,12 @@ var Computer = function () {
 
 			if (firstCard && !this.firstCardHtml.hasClass('flipped')) {
 				this.firstCardHtml = this.deckHtml.find('li:last-child');
-				//this.firstCardHtml.find('.avatar').css('background-image', 'url(img/' + firstCard.uriName + 'computer.png');
+				
 				playerClass = this.getPlayerClass(firstCard.name);
+				
+				this.firstCardHtml.addClass(playerClass);
+				this.firstCardHtml.find('.avatar').addClass('right-player')
 				this.firstCardHtml.find('.card-name').html(firstCard.name);
-				this.firstCardHtml.find('.avatar').addClass(playerClass + ' right-player');
 
 				for (attribute in firstCard.attributes) {
 					this.firstCardHtml.find('.' + attribute).html(firstCard.attributes[attribute]);

@@ -57,7 +57,8 @@ var Player = function () {
 				
 				playerClass = this.getPlayerClass(firstCard.name);
 
-				this.firstCardHtml.find('.avatar').addClass(playerClass + ' left-player');
+				this.firstCardHtml.addClass(playerClass);
+				this.firstCardHtml.find('.avatar').addClass('left-player')
 				this.firstCardHtml.find('.card-name').html(firstCard.name);
 
 				for (attribute in firstCard.attributes) {
