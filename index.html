@@ -8,16 +8,37 @@
 </head>
 <body>
 	<div id="wrapper">
+		<h1>
+			<div id="logo"></div>
+		</h1>
+	<!-- 
 		<h1>Mano a Mano</h1>
-		
+		 -->
 		<!-- <button id="start">Começar</button> -->
-		
-		<ol id="player" class="deck"></ol>
-		
-		<ol id="computer" class="deck"></ol>
 
-		<div id="game-mode-modal" class="modal display-none">
-			<ul class="game-options">
+		<div class="game-wrapper display-none">
+			<ol id="player" class="deck"></ol>
+			
+			<ol id="computer" class="deck"></ol>
+		</div>
+		
+
+		<div id="start-modal" class="modal display-none">
+			<ul class="start-options-list">
+				<li class="start-option" data-option="start">
+					<span  class="start-label">Jogar</span>
+					<span  class="start-image start-play">&nbsp;</span>
+				</li>
+				<li class="start-option" data-option="instructions">
+					<span  class="start-label">Instruções</span>
+					<span  class="start-image start-instructions">&nbsp;</span>
+				</li>
+				<li class="start-option" data-option="configurations">
+					<span  class="start-label">Configurações</span>
+					<span  class="start-image start-configurations">&nbsp;</span>
+				</li>
+			</ul>
+			<ul class="game-options display-none">
 				<li data-mode="definedRounds">
 					<span  class="modal-option">Partida rápida</span>
 				</li>
