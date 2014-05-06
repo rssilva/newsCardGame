@@ -6,6 +6,11 @@ html, body {
 	background: green;
 }
 
+@font-face {
+	font-family: lobster;
+	src: url(../fonts/lobster1.4.otf);
+}
+
 .display-none {display: none}
 
 #wrapper {
@@ -17,11 +22,22 @@ html, body {
 	border: 1px solid black;
 }
 
+.field-image {
+	background: url('../img/field.png') no-repeat center bottom;
+}
+
 h1 {
 	color: #fff;
 	text-align: center;
 	margin: 0;
-	padding: 50px 0;
+	/*padding: 50px 0;*/
+}
+
+#logo {
+	width: 279px;
+	height: 278px;
+	margin: 0 auto;
+	background-image: url('../img/title-logo.png')
 }
 
 .deck {
@@ -208,16 +224,61 @@ h1 {
 	margin-left: -50px;
 }
 
-#game-mode-modal {
-	position: absolute;
-	top: 50%;
-	left: 50%;
+#start-modal {
+	/*position: absolute;*/
+	top: 300px;
+	/*left: 50%;*/
 	z-index: 2;
-	width: 300px;
-	height: 200px;
+	width: 530px;
+	min-height: 200px;
 	background-color: #00AC00; /*just kidding, this value is awful*/
-	margin: -100px 0 0 -150px;
+	margin: 0 auto;
 	box-shadow: 5px 5px;
+}
+
+.start-label {
+	font-size: 43px;
+	color: #fff;
+	margin: 10px 0 0 100px;
+	display: block;
+	float: left;
+	/*font-family: lobster;*/
+	/*text-transform: uppercase;*/
+}
+
+.start-image {
+	height: 74px;
+	width: 90px;
+	margin-right: 20px;
+	display: block;
+	float: right;
+	background: url('../img/players.png') no-repeat;
+}
+
+.start-options-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.start-option {
+	background-image: url('../img/pennant-opening.png');
+	height: 92px;
+	cursor: pointer;
+}
+
+.start-play {
+	background-position: 0 0;
+	margin: 2px 16px 0 0;
+}
+.start-instructions {
+	background-position: -90px 0;
+	margin: -5px 28px 0 0;
+}
+.start-configurations {
+	background-position: -180px 0;
+	margin: -7px 30px 0 0;
 }
 
 .modal-option {
@@ -234,6 +295,8 @@ h1 {
 	height: 50px;
 	background-color: red;
 }
+
+
 
 .asamoahgyan 		.card-name{background-position: -176px -504px}
 .bengtson 			.card-name{background-position: -176px -396px}
