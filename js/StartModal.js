@@ -13,6 +13,13 @@ var StartModal = function (options) {
 			this.options.$el.addClass('display-none');
 		},
 
+		onFirstOptionClicked: function (option) {
+			if (option === 'start') {
+				this.options.$el.find('.start-options-list').addClass('display-none');
+				this.options.$el.find('.game-options').removeClass('display-none');
+			}
+		},
+
 		bindEvents: function () {
 			var that = this;
 
@@ -22,6 +29,10 @@ var StartModal = function (options) {
 				});
 
 				that.close();
+			});
+
+			this.options.$el.find('.start-options-list').find('li').on('click', function () {
+				that.onFirstOptionClicked($(this).data('option'))
 			});
 		}
 	}

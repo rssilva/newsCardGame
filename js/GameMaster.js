@@ -21,6 +21,8 @@ var GameMaster = function () {
 
 			this.currentRound = 0;
 
+			this.gameWrapper = $('.game-wrapper');
+
 			this.gameMode = new GameModeModule({
 				gameMaster: this
 			});
@@ -38,7 +40,7 @@ var GameMaster = function () {
 
 		instantiateStartModal: function () {
 			this.startModal = new StartModal({
-				$el: $('#game-mode-modal')
+				$el: $('#start-modal')
 			});
 
 			this.startModal.init();
@@ -168,8 +170,11 @@ var GameMaster = function () {
 
 			//triggered on StartModal to choose the game mode
 			$(window).on('gameModeChoosed', function (e, data) {
+				that.gameWrapper.removeClass('display-none');
 				that.gameMode.setMode(data.mode);
-				that.player.flipFirstCard();
+				setTimeout(function () {
+					that.player.flipFirstCard();
+				}, 300);
 			});
 
 			$(window).on('confirmRound', function () {
