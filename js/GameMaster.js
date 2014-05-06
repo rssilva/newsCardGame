@@ -21,6 +21,7 @@ var GameMaster = function () {
 
 			this.currentRound = 0;
 
+			this.presentationWrapper = $('.presentation-wrapper');
 			this.gameWrapper = $('.game-wrapper');
 
 			this.gameMode = new GameModeModule({
@@ -160,6 +161,19 @@ var GameMaster = function () {
 			this.computer.removeFlipped();
 		},
 
+		onGameModeChoosed: function (data) {
+			var that = this;
+
+			this.gameWrapper.removeClass('display-none');
+			this.presentationWrapper.addClass('display-none');
+			$('body').addClass('field-image');
+
+			this.gameMode.setMode(data.mode);
+			setTimeout(function () {
+				that.player.flipFirstCard();
+			}, 300);
+		},
+
 		bindEvents: function () {
 			var that = this;
 
@@ -170,11 +184,7 @@ var GameMaster = function () {
 
 			//triggered on StartModal to choose the game mode
 			$(window).on('gameModeChoosed', function (e, data) {
-				that.gameWrapper.removeClass('display-none');
-				that.gameMode.setMode(data.mode);
-				setTimeout(function () {
-					that.player.flipFirstCard();
-				}, 300);
+				that.onGameModeChoosed(data);
 			});
 
 			$(window).on('confirmRound', function () {

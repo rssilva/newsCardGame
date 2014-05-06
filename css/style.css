@@ -272,6 +272,7 @@ h1 {
 	background-position: 0 0;
 	margin: 2px 16px 0 0;
 }
+
 .start-instructions {
 	background-position: -90px 0;
 	margin: -5px 28px 0 0;
@@ -296,6 +297,26 @@ h1 {
 	background-color: red;
 }
 
+.score-container {
+	height: 74px;
+}
+
+.score-display {
+	width: 360px;
+	height: 74px;
+	background: url('../img/pennant-score.png') no-repeat;
+	
+}
+
+.score-user {
+	background-position: 0 0;
+	float: left;
+}
+
+.score-computer {
+	background-position: -375px 0;
+	float: right;
+}
 
 
 .asamoahgyan 		.card-name{background-position: -176px -504px}
