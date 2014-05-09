@@ -3,7 +3,11 @@ html, body {
 	padding: 0;	
 	height: 100%;
 	min-height: 100%;
-	background: green;
+	background: #006838; /* Old browsers */
+	background: -webkit-radial-gradient(top, ellipse cover,  #39b54a 0%, #006838 70%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(top, ellipse cover,  #39b54a 0%, #006838 70%); /* Opera 12+ */
+	background: -ms-radial-gradient(top, ellipse cover,  #39b54a 0%, #006838 70%); /* IE10+ */
+	background: radial-gradient(ellipse at top,  #39b54a 0%, #006838 70%); /* W3C */
 }
 
 .display-none {display: none}
@@ -203,15 +207,10 @@ html, body {
 }
 
 #start-modal {
-	/*position: absolute;*/
-	top: 300px;
-	/*left: 50%;*/
 	z-index: 2;
 	width: 530px;
 	min-height: 200px;
-	background-color: #00AC00; /*just kidding, this value is awful*/
-	margin: 0 auto;
-	box-shadow: 5px 5px;
+	margin: 50px auto 0 auto;
 }
 
 .start-options-list{
@@ -230,12 +229,11 @@ html, body {
 
 .start-label {
 	font-size: 40px;
-	line-height: 70px;
+	line-height: 63px;
 	color: #fff;
 	display: block;
 	float: left;
 	font-family: 'Lobster', cursive;
-	text-transform: uppercase;
 }
 
 .start-image {
