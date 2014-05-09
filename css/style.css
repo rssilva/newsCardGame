@@ -213,21 +213,21 @@ html, body {
 	margin: 50px auto 0 auto;
 }
 
-.start-options-list{
+.start-options-list, .game-options {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
 }
 
-.start-option {
+.start-option, .game-option {
 	background-image: url('../img/pennant-opening.png');
 	height: 92px;
 	cursor: pointer;
 	text-indent: 100px;
 }
 
-.start-label {
+.start-label, .option-label {
 	font-size: 40px;
 	line-height: 63px;
 	color: #fff;
@@ -236,7 +236,7 @@ html, body {
 	font-family: 'Lobster', cursive;
 }
 
-.start-image {
+.start-image, .option-image {
 	height: 74px;
 	width: 90px;
 	margin-right: 20px;
@@ -257,6 +257,15 @@ html, body {
 .start-configurations {
 	background-position: -180px 0;
 	margin: -7px 30px 0 0;
+}
+.option-quick {
+	background: url('../img/rabbit.png') no-repeat 10px center; /* srsly, wtf? */
+	background-size: auto 60%;
+}
+
+.option-full {
+	background: url('../img/ribbon.png') no-repeat 20px center; /* srsly, wtf? */
+	background-size: auto 60%;
 }
 
 .modal-option {
