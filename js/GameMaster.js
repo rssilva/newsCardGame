@@ -103,7 +103,7 @@ var GameMaster = function () {
 				result		= '';
 				playerValue = playerData.val,
 				pcValue 	= pcData[attr];
-			
+				
 			if (playerValue > pcValue) {
 				result = 'won';
 				this.score.player++;
@@ -136,8 +136,8 @@ var GameMaster = function () {
 			gameStatus = this.gameMode.isOver();
 
 			if (gameStatus.isOver) {
-				console.log('acabou o jogo!!!', this.score)
-				alert('APONTA O ÁRBITRO!!! Jogador: ' + this.score.player + ' Computador: ' + this.score.pc)
+				console.log('acabou o jogo!!!', this.score);
+				alert('APONTA O ÁRBITRO!!! Jogador: ' + this.score.player + ' Computador: ' + this.score.pc);
 			} else {
 				//TODO: solve this like a real developer
 				

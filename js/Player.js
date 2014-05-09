@@ -94,7 +94,7 @@ var Player = function () {
 				$(window).trigger('attributeClicked', {
 					name 		: $(src.parentNode).find('.card-name').text(),
 					attribute 	: $(src).data('attr'),
-					val 		: src.innerText
+					val 		: src.textContent
 				});
 			}
 		},
