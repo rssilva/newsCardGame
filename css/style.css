@@ -9,9 +9,9 @@ html, body {
 .display-none {display: none}
 
 #wrapper {
-	height: 100%;
 	width: 100%;
 	max-width: 1000px;
+	height: 100%;
 	max-height: 800px;
 	position: relative;
 	margin: 0 auto;
@@ -19,6 +19,7 @@ html, body {
 
 .field-image {
 	background: url('../img/field.png') no-repeat center bottom;
+	background-size: 100% auto;
 }
 
 #logo {
@@ -33,19 +34,19 @@ html, body {
 	position: absolute;
 	width: 10%;
 	list-style: none;
-	width: 45px;
-	height: 120px;
+	width: 60px;
+	height: 140px;
 	margin: 0;
 	padding: 0;
-	bottom: 10%;
+	bottom: 5%;
 }
 
 #player {
-	left: 15%;
+	left: 16%;
 }
 
 #computer {
-	right: 15%;
+	right: 16%;
 }
 
 .card {
@@ -60,12 +61,12 @@ html, body {
 
 #player .card {
 	left: 0;
-	transform: perspective(300px) rotateX(70deg) skewX(-20deg);
+	transform: perspective(500px) rotateX(50deg) skewX(-23deg);
 }
 
 #computer .card {
 	right: 0;
-	transform: perspective(300px) rotateX(70deg) skewX(20deg);
+	transform: perspective(500px) rotateX(50deg) skewX(23deg);
 }
 
 .card > div {
@@ -183,12 +184,12 @@ html, body {
 }
 
 #player .flipped {
-	left: 70px;
+	left: 100px;
 	transform: rotateX(0deg) skewX(0deg);
 }
 
 #computer .flipped {
-	right: 70px;
+	right: 100px;
 	transform: rotateX(0deg) skewX(0deg);
 }
 
