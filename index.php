@@ -25,8 +25,9 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Mano a Mano</title>
 	
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>

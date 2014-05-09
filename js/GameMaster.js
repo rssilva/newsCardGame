@@ -166,7 +166,7 @@ var GameMaster = function () {
 
 			this.gameWrapper.removeClass('display-none');
 			this.presentationWrapper.addClass('display-none');
-			$('body').addClass('field-image');
+			$('#wrapper').addClass('field-image');
 
 			this.gameMode.setMode(data.mode);
 			setTimeout(function () {
