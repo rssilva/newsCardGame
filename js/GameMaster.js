@@ -22,7 +22,9 @@ var GameMaster = function () {
 			this.currentRound = 0;
 
 			this.presentationWrapper = $('.presentation-wrapper');
-			this.gameWrapper = $('.game-wrapper');
+			this.gameWrapper 		 = $('.game-wrapper');
+			this.userScore			 = $('.score-user').find('.score-number');
+			this.pcScore	 		 = $('.score-computer').find('.score-number');
 
 			this.gameMode = new GameModeModule({
 				gameMaster: this
@@ -97,13 +99,14 @@ var GameMaster = function () {
 			this.compareData(playerData, pcData, playerData.attribute);
 		},
 
-		compareData: function (playerData, pcData, attr) {
-			var that 		= this,
-				roundData,
-				result		= '';
-				playerValue = playerData.val,
-				pcValue 	= pcData[attr];
-				
+		setScore: function (playerScore, pcScore) {
+			this.userScore.text(this.score.player);
+			this.pcScore.text(this.score.pc);
+		},
+
+		evaluateResult: function (playerValue, pcValue) {
+			var result = '';
+
 			if (playerValue > pcValue) {
 				result = 'won';
 				this.score.player++;
@@ -113,6 +116,39 @@ var GameMaster = function () {
 				result = 'loose';
 				this.score.pc++;
 			}
+
+			return result;
+		},
+
+		highlightLoser: function (result) {
+			if (result === 'won') {
+				this.computer.firstCardHtml.append('<div class="looser"></div>');
+			} else if (result === 'loose') {
+				this.player.firstCardHtml.append('<div class="looser"></div>');
+			}
+		},
+
+		highlightAttribute: function (attr) {
+			var queryClass = '.' + attr;
+			
+			this.player.firstCardHtml.find(queryClass).addClass('highlighted-attribute');
+			this.computer.firstCardHtml.find(queryClass).addClass('highlighted-attribute');
+		},
+
+		compareData: function (playerData, pcData, attr) {
+			var that 		= this,
+				roundData,
+				result		= '';
+				playerValue = playerData.val,
+				pcValue 	= pcData[attr];
+				
+			result = this.evaluateResult(playerValue, pcValue);
+
+			this.setScore();
+			setTimeout(function () {
+				that.highlightLoser(result);
+				that.highlightAttribute(attr);
+			}, 1000);
 
 			//adding all round data to an object will allow us
 			//to have 'match statistics' for a future feature :)

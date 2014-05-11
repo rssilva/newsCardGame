@@ -278,9 +278,26 @@ html, body {
 	top: 50%;
 	left: 50%;
 	width: 100px;
-	margin-left: -50px;
+	margin-left: -100px;
 	height: 50px;
-	background-color: red;
+	/*background-color: red;*/
+}
+
+.looser {
+	position: absolute;
+	top:  0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	opacity: 0.5;
+	background-color: #000;
+}
+
+.ok-button {
+	width: 200px;
+	height: 200px;
+	font-size: 50px;
 }
 
 .score-container {
@@ -302,6 +319,39 @@ html, body {
 .score-computer {
 	background-position: -375px 0;
 	float: right;
+}
+
+.score-number {
+	height: 74px;
+	width: 50px;
+	display: block;
+	font-size: 30px;
+	font-family: inherit;
+	margin-left: 12px;
+	line-height: 70px;
+	text-align: center;
+}
+
+.score-user .score-number {
+	float: right;
+	margin-right: 10px;
+}
+
+.score-computer .score-number {
+	float: left;
+	margin-left: 10px;
+}
+
+.card .highlighted-attribute {
+	background-color: red;
+}
+
+#player .card .highlighted-attribute:hover {
+	background: red;
+}
+
+#player .card .highlighted-attribute:hover:before {
+	background: red;
 }
 
 .card-1   {bottom: 2px;}
