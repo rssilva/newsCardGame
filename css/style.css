@@ -10,7 +10,13 @@ html, body {
 	background: radial-gradient(ellipse at top,  #39b54a 0%, #006838 70%); /* W3C */
 }
 
+p {
+	margin: 0;
+	padding: 0;
+}
+
 .display-none {display: none}
+.mb15 {margin-bottom: 15px}
 
 #wrapper {
 	width: 100%;
@@ -272,6 +278,49 @@ html, body {
 	cursor: pointer;
 }
 
+.game-instructions {
+	background: #39b54a;
+	padding: 10px;
+	height: 300px;
+	overflow: auto;
+	box-shadow: 5px 5px #333;
+}
+
+.game-instructions p {
+	margin-bottom: 8px;
+	color: #fff;
+	font-size: 18px;
+}
+
+.game-instructions a {
+	color: #fff;
+}
+
+.game-instructions .instructions-resume {
+	margin-bottom: 35px;
+}
+
+.game-instructions .main-title {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.game-instructions .title {
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.game-instructions .match-description {
+	margin-bottom: 28px;
+}
+
+.game-instructions .instructions-end {
+	margin-top: 50px;
+}
+
 #round-confirm-modal {
 	position: absolute;
 	z-index: 3;
@@ -284,6 +333,7 @@ html, body {
 }
 
 .looser {
+	border-radius: 8px;
 	position: absolute;
 	top:  0;
 	bottom: 0;
