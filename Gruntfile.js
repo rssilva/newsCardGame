@@ -8,17 +8,16 @@ module.exports = function( grunt ) {
             options : {
               report : 'gzip',
               compress : true,
-              mangle : false
+              mangle : true
             },
               files : {
                   'dist/js/bundle.js' : [
-                    'js/jquery-1.11.0.min.js',
-                    'StartModal.js',
-                    'RoundModal.js',
-                    'Player.js',
-                    'Computer.js',
-                    'GameModeModule.js',
-                    'GameMaster.js'
+                    'js/StartModal.js',
+                    'js/RoundModal.js',
+                    'js/Player.js',
+                    'js/Computer.js',
+                    'js/GameModeModule.js',
+                    'js/GameMaster.js'
                   ]
               }
           }
