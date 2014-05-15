@@ -52,7 +52,7 @@
 			},
 
 			configRoundModal: function () {
-				this.roundModal = roundModal;
+				this.roundModal = exports.roundModal;
 				this.roundModal.bindEvents();
 			},
 			

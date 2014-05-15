@@ -16,4 +16,6 @@
 			});
 		}
 	}
+
+	exports.roundModal = roundModal;
 })();
