@@ -278,7 +278,7 @@ p {
 	cursor: pointer;
 }
 
-.game-instructions {
+.game-instructions, .game-configurations {
 	background: #39b54a;
 	padding: 10px;
 	height: 300px;
@@ -319,6 +319,10 @@ p {
 
 .game-instructions .instructions-end {
 	margin-top: 50px;
+}
+
+.game-configurations {
+	
 }
 
 #round-confirm-modal {
