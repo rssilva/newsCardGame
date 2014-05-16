@@ -16,17 +16,22 @@
 					player: 0,
 					pc: 0
 				}
+				this.currentRound = 0;
 
+				this.cacheElements();
+
+				this.instantiateModules();
+				
+				this.loadCards('js/cardsList.json');
+				this.bindEvents();
+			},
+
+			instantiateModules: function () {
 				this.instantiateStartModal();
 				this.configRoundModal();
 				this.instantiateSoundModule();
 
-				this.currentRound = 0;
-
-				this.presentationWrapper = $('.presentation-wrapper');
-				this.gameWrapper 		 = $('.game-wrapper');
-				this.userScore			 = $('.score-user').find('.score-number');
-				this.pcScore	 		 = $('.score-computer').find('.score-number');
+				this.instantiateGeneralOptions();
 
 				this.gameMode = new exports.GameModeModule({
 					gameMaster: this
@@ -38,9 +43,6 @@
 				
 				this.computer = new exports.Computer();
 				this.computer.init();
-				
-				this.loadCards('js/cardsList.json');
-				this.bindEvents();
 			},
 
 			instantiateStartModal: function () {
@@ -61,6 +63,18 @@
 				this.soundModule = new exports.SoundModule();
 				this.soundModule.init();
 				this.soundModule.playMusic('music');
+			},
+
+			instantiateGeneralOptions: function () {
+				this.generalOptionsComponent = new exports.GeneralOptionsComponent(this);
+				this.generalOptionsComponent.init();
+			},
+
+			cacheElements: function () {
+				this.presentationWrapper = $('.presentation-wrapper');
+				this.gameWrapper 		 = $('.game-wrapper');
+				this.userScore			 = $('.score-user').find('.score-number');
+				this.pcScore	 		 = $('.score-computer').find('.score-number');
 			},
 			
 			loadCards : function (_url) {
@@ -211,7 +225,6 @@
 				if (this.score.player > this.score.pc) {
 					this.soundModule.playEffect('riot')
 				}
-				//console.log('acabou o jogo!!!', this.score);
 			},
 
 			onRoundConfirmed: function () {

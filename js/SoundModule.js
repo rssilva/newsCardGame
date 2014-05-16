@@ -3,8 +3,11 @@
 		return {
 			init: function () {
 				this.options = options;
-				this.musics = {};
-				this.effects = {};
+				this.musics 	= {};
+				this.effects 	= {};
+				this.musicOn 	= false;
+				this.effectsOn 	= false;
+				this.isMuted 	= false;
 
 				this.config();
 
@@ -36,13 +39,6 @@
 			start: function () {
 				this.isSupported 	= typeof buzz !== 'undefined' && buzz.isSupported();
 				this.extension 		= this.getExtension();
-				
-				/*
-				this.sounds.startWhistle = new buzz.sound('../sound/startWhistle' + extension);
-				this.sounds.snap    	 = new buzz.sound('../sound/snap' + extension);
-				this.sounds.riot	 	 = new buzz.sound('../sound/riot' + extension);
-				this.sounds.music1	     = new buzz.sound('../sound/music1' + extension, {loop: true});
-				*/
 
 				this.loadMusic('music', 'audio/music1', {loop: true});
 			},
@@ -74,7 +70,7 @@
 			},
 
 			playMusic: function (music) {
-				if (this.musics[music] && this.musicOn) {
+				if (!this.isMuted && this.musics[music] && this.musicOn) {
 					this.musics[music].play();
 					this.musics[music].setVolume(10);
 				}
@@ -87,7 +83,7 @@
 			},
 
 			playEffect: function (effect) {
-				if (this.effects[effect]) {
+				if (!this.isMuted && this.effects[effect]) {
 					this.effects[effect].play()
 				}
 			},
@@ -106,19 +102,17 @@
 			},
 
 			updateMusic: function () {
-				if (this.musicOn) {
+				if (!this.isMuted && this.musicOn) {
 					this.playMusic('music');
 				} else {
 					this.stopMusic('music');
 				}
 			},
 
-			mute: function () {
+			mute: function (state) {
+				this.isMuted = state;
 
-			},
-
-			unMute: function () {
-
+				this.updateMusic();
 			},
 
 			bindEvents: function () {
@@ -126,6 +120,10 @@
 
 				$(window).on('updateConfigurations', function (e, data) {
 					that.updateConfigurations(data)
+				});
+
+				$(window).on('muteAction', function (e, data) {
+					that.mute(data.isMuted);
 				})
 			}
 		}
