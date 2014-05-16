@@ -19,6 +19,7 @@
 
 				this.instantiateStartModal();
 				this.configRoundModal();
+				this.instantiateSoundModule();
 
 				this.currentRound = 0;
 
@@ -54,6 +55,12 @@
 			configRoundModal: function () {
 				this.roundModal = exports.roundModal;
 				this.roundModal.bindEvents();
+			},
+
+			instantiateSoundModule: function () {
+				this.soundModule = new exports.SoundModule();
+				this.soundModule.init();
+				this.soundModule.playMusic('music');
 			},
 			
 			loadCards : function (_url) {
@@ -95,7 +102,10 @@
 			},
 
 			onAttributeClicked: function (playerData) {
-				var pcData = this.computer.flipFirstCard(); //get all attributes
+				var pcData;
+
+				this.soundModule.playEffect('snap');
+				pcData = this.computer.flipFirstCard(); //get all attributes
 
 				this.compareData(playerData, pcData, playerData.attribute);
 			},
@@ -149,6 +159,7 @@
 				setTimeout(function () {
 					that.highlightLoser(result);
 					that.highlightAttribute(attr);
+					that.roundModal.open();
 				}, 1000);
 
 				//adding all round data to an object will allow us
@@ -173,20 +184,40 @@
 				gameStatus = this.gameMode.isOver();
 
 				if (gameStatus.isOver) {
-					console.log('acabou o jogo!!!', this.score);
-					alert('APONTA O ÁRBITRO!!! Jogador: ' + this.score.player + ' Computador: ' + this.score.pc);
+					this.onGameEnd();
 				} else {
-					//TODO: solve this like a real developer
-					
 					this.roundEnded = true;
-					this.roundModal.open();
+					
+					this.checkEndProximity();
 				}
+			},
 
+			/**
+			 * Checks if the end is coming MUAHAHAHA... and loads the riot end song
+			 */
+			checkEndProximity: function () {
+				var totalRounds = this.gameMode.selectedMode.rounds;
+
+				if (totalRounds / 2 > this.currentRound) {
+					if (!this.finalSoundLoaded) {
+						this.soundModule.loadEffect('riot', 'audio/riot');
+						this.soundModule.effects['riot'].setVolume(30);
+						this.finalSoundLoaded = true;
+					}
+				}
+			},
+
+			onGameEnd: function () {
+				if (this.score.player > this.score.pc) {
+					this.soundModule.playEffect('riot')
+				}
+				//console.log('acabou o jogo!!!', this.score);
 			},
 
 			onRoundConfirmed: function () {
 				if (this.roundEnded) {
 					this.removeFlipped();
+					this.soundModule.playEffect('snap');
 					this.player.flipFirstCard();
 
 					this.roundEnded = false;
@@ -198,6 +229,11 @@
 				this.computer.removeFlipped();
 			},
 
+			onGameModeScreen: function () {
+				this.soundModule.loadEffect('startWhistle', 'audio/startWhistle');
+				this.soundModule.loadEffect('snap', 'audio/snap')
+			},
+
 			onGameModeChoosed: function (data) {
 				var that = this;
 
@@ -206,7 +242,11 @@
 				$('#wrapper').addClass('field-image');
 
 				this.gameMode.setMode(data.mode);
+
+				this.soundModule.playEffect('startWhistle');
+
 				setTimeout(function () {
+					that.soundModule.playEffect('snap');
 					that.player.flipFirstCard();
 				}, 300);
 			},
@@ -226,6 +266,10 @@
 
 				$(window).on('confirmRound', function () {
 					that.onRoundConfirmed();
+				});
+
+				$(window).on('onGameModeScreen', function () {
+					that.onGameModeScreen();
 				});
 			}
 		}
