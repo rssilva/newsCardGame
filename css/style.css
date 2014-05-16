@@ -27,6 +27,42 @@ p {
 	margin: 0 auto;
 }
 
+.game-general-options {
+	position: absolute;
+	width: 120px;
+	height: 60px;
+	top: 0;
+	right: 0;
+}
+
+.game-general-options .general-option-button {
+	float: left;
+	width: 60px;
+	height: 60px;
+	background-image: url(../img/options.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.general-music-button {
+	background-position: 5px 5px;
+}
+
+.isMuted .button-mask{
+	background-color: #333;
+	opacity: 0.3;
+}
+
+.general-configurations-button {
+	background-position: -60px 5px;
+}
+
+.button-mask {
+	width: 60px;
+	height: 60px;
+	float: left;
+}
+
 .field-image {
 	background: url('../img/field.png') no-repeat center bottom;
 	background-size: 100% auto;
@@ -322,7 +358,7 @@ p {
 }
 
 .game-configurations {
-	
+
 }
 
 #round-confirm-modal {
