@@ -28,11 +28,11 @@
 		}
 
 		if (buzz.isSupported()) {
-			sounds.startWhistle = new buzz.sound('../sound/startWhistle' + extension);
-			sounds.snap 		= new buzz.sound('../sound/snap' + extension);
-			sounds.riot 		= new buzz.sound('../sound/riot' + extension);
-			sounds.music1 		= new buzz.sound('../sound/music1' + extension, {loop: true});
-			sounds.music2 		= new buzz.sound('../sound/music2' + extension, {loop: true});
+			sounds.startWhistle = new buzz.sound('../audio/startWhistle' + extension);
+			sounds.snap 		= new buzz.sound('../audio/snap' + extension);
+			sounds.riot 		= new buzz.sound('../audio/riot' + extension);
+			sounds.music1 		= new buzz.sound('../audio/music1' + extension, {loop: true});
+			sounds.music2 		= new buzz.sound('../audio/music2' + extension, {loop: true});
 		}
 
 		$('.start-whistle').on('click', function () {
