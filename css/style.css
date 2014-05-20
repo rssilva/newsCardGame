@@ -488,16 +488,19 @@ p {
 	background-repeat: no-repeat;
 }
 
-.expert {
+.expert #share-image{
 	background: url('../img/craque.png') 166px -1px;
+	background-repeat: no-repeat;
 }
 
-.promise {
+.promise #share-image{
 	background: url('../img/promessa.png') 134px 14px;
+	background-repeat: no-repeat;
 }
 
-.noob {
+.noob #share-image {
 	background: url('../img/perna-de-pau.png') 207px -5px;
+	background-repeat: no-repeat;
 }
 
 #share-field {
@@ -520,30 +523,42 @@ p {
 	position: absolute;
 	z-index: 5;
 	font-size: 10px;
-	width: 130px;
+	width: 120px;
 	margin: 40px 0 0 15px;
 	font-family: 'Lato';
 	font-weight: bold;
 }
 
+.expert #punchline {
+	font-size: 12px;
+	width: 140px;
+}
+
 #text-container {
-	margin-top: 40px;
+	margin-top: 42px;
 	height: 200px;
 }
 
 .share-title {
 	margin: 0 auto;
 	text-align: center;
-	height: 70px;
+	height: 50px;
 	font-size: 50px;
 	font-family: 'Oswald Regular';
 }
 
 .share-subtitle {
-	margin: 0 auto;
+	margin: 15px auto 0 auto;
 	text-align: center;
-	font-size: 35px;
+	font-size: 40px;
 	font-family: 'Oswald Light';
+}
+
+.share-description {
+	margin: 10px auto 0 auto;
+	width: 375px;
+	font-size: 11px;
+	font-family: 'Lato Regular';
 }
 
 .share-button {
