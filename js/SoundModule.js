@@ -40,7 +40,7 @@
 				this.isSupported 	= typeof buzz !== 'undefined' && buzz.isSupported();
 				this.extension 		= this.getExtension();
 
-				this.loadMusic('music', 'audio/music1', {loop: true});
+				this.loadMusic('music', 'audio/music2', {loop: true});
 			},
 
 			loadMusic: function (name, url, options) {

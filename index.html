@@ -3,6 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mano a Mano</title>
+
+	<meta property="og:image" content="http://www.dailydevtips.com/cards/img/share.png"/>
+	<meta property="og:title" content="Mano a Mano"/>
+	<meta property="og:description" content="Você já é um craque? Jogue e mostre para todo mundo."/>
+	<meta property="og:url"   content="http://www.dailydevtips.com/cards/"/>
+	<meta property="og:site_name" content="Mano a Mano"/>
+	<meta property="og:type" content="website"/>
 	
 	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
@@ -10,23 +17,25 @@
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+	<div class="game-general-options">
+		<div class="general-option-button general-music-button">
+			<span class="button-mask"></span>
+		</div>
+		<div class="general-option-button general-configurations-button"></div>
+	</div>
 	<div id="wrapper">
 		<div class="presentation-wrapper">
 			<h1 id="logo">Mano a Mano</h1>
 		</div>
-		<div class="game-general-options">
-			<div class="general-option-button general-music-button">
-				<span class="button-mask"></span>
-			</div>
-			<div class="general-option-button general-configurations-button"></div>
-		</div>
 		<div class="game-wrapper display-none">
 			<div class="score-container">
 				<div class="score-display score-user">
+					<span class="score-name player-name">JOGADOR</span>
 					<span class="score-number">0</span>
 				</div>
 				<div class="score-display score-computer">
 					<span class="score-number">0</span>
+					<span class="score-name pc-name">COMPUTADOR</span>
 				</div>
 			</div>
 			<ol id="player" class="deck"></ol>
@@ -95,7 +104,7 @@
 						<input type="checkbox" checked="checked" class=" game-config game-effects">
 					</li>
 					<li>
-						<button class="ok-config-button">Ok</button>
+						<button class="ok-config-button">OK</button>
 					</li>
 				</ul>
 			</div>
