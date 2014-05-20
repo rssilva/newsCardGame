@@ -1,8 +1,6 @@
 html, body {
 	margin: 0;
 	padding: 0;	
-	height: 100%;
-	min-height: 100%;
 	background: #006838; /* Old browsers */
 	background: -webkit-radial-gradient(top, ellipse cover,  #39b54a 0%, #006838 70%); /* Chrome10+,Safari5.1+ */
 	background: -o-radial-gradient(top, ellipse cover,  #39b54a 0%, #006838 70%); /* Opera 12+ */
@@ -27,8 +25,6 @@ p {
 #wrapper {
 	width: 100%;
 	max-width: 1000px;
-	height: 100%;
-	max-height: 800px;
 	position: relative;
 	margin: 0 auto;
 }
@@ -74,24 +70,7 @@ p {
 	background-size: 100% auto;
 }
 
-#logo {
-	width: 279px;
-	height: 278px;
-	margin: 0 auto;
-	background-image: url('../img/title-logo.png');
-	font-size: 0px;
-}
 
-.deck {
-	position: absolute;
-	width: 10%;
-	list-style: none;
-	width: 60px;
-	height: 140px;
-	margin: 0;
-	padding: 0;
-	bottom: 5%;
-}
 
 #player {
 	left: 16%;
@@ -102,9 +81,10 @@ p {
 }
 
 .gallery-list {
+	width: 860px;
 	overflow: auto;
-	margin: 0 0 0 0;
-	padding-top: 70px;
+	margin: 0 auto 0 auto;
+	padding: 70px 0 0 0;
 	position: relative;
 }
 
