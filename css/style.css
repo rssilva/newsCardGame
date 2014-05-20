@@ -444,6 +444,126 @@ p {
 	background: red;
 }
 
+#share-wrapper {
+	background-color: #fff;
+	margin: 100px auto 0 auto;
+	min-height: 625px;
+	padding: 12px 0 0 12px;
+	width: 463px;
+	position: relative;
+}
+
+#share-zh-logo {
+	background: url('../img/logo-zh-triangle.png') no-repeat;
+	height: 350px;
+	width: 313px;
+	position: absolute;
+	z-index: 4;
+}
+
+#share-logo {
+	background: url('../img/share-game-logo.png') no-repeat;
+	height: 76px;
+	width: 109px;
+	position: absolute;
+	right: 15px;
+	z-index: 4;
+
+}
+
+#share-field-wrapper {
+	background: url('../img/share-news-background.png') no-repeat 0 -1px;
+	top: 80px;
+	height: 265px;
+	width: 441px;
+	position: relative;
+	border-top: 10px #231F20 solid;
+}
+
+#share-image {
+	width: 100%;
+	margin-top: 40px;
+	height: 152px;
+	position: relative;
+	background-repeat: no-repeat;
+}
+
+.expert {
+	background: url('../img/craque.png') 166px -1px;
+}
+
+.promise {
+	background: url('../img/promessa.png') 134px 14px;
+}
+
+.noob {
+	background: url('../img/perna-de-pau.png') 207px -5px;
+}
+
+#share-field {
+	position: absolute;
+	background: url('../img/share-field.png') no-repeat -60px 0;
+	top: 60px;
+	height: 176px;
+	width: 512px;
+}
+
+#share-buttons {
+	height: 71px;
+	width: 442px;
+	position: absolute;
+	bottom: 30px;
+	margin-left: 5px;
+}
+
+#punchline {
+	position: absolute;
+	z-index: 5;
+	font-size: 10px;
+	width: 130px;
+	margin: 40px 0 0 15px;
+	font-family: 'Lato';
+	font-weight: bold;
+}
+
+#text-container {
+	margin-top: 40px;
+	height: 200px;
+}
+
+.share-title {
+	margin: 0 auto;
+	text-align: center;
+	height: 70px;
+	font-size: 60px;
+	font-family: 'Oswald Regular';
+}
+
+.share-subtitle {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 41px;
+	font-family: 'Oswald Light';
+}
+
+.share-button {
+	width: 71px;
+	height: 71px;
+	float: left;
+	cursor: pointer;
+	background-image: url('../img/spr-social.png')
+}
+
+.twitter-button {
+	background-position: -78px 0;
+	margin-left: 114px;
+}
+
+.google-plus-button {
+	background-position: -155px 0;
+	margin-left: 114px;
+}
+
 .card-1   {bottom: 2px;}
 .card-2   {bottom: 4px;}
 .card-3   {bottom: 6px;}
