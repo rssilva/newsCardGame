@@ -13,6 +13,8 @@ module.exports = function( grunt ) {
               files : {
                   'dist/js/bundle.js' : [
                     'js/StartModal.js',
+                    'js/GeneralOptionsComponent.js',
+                    'js/SoundModule.js',
                     'js/RoundModal.js',
                     'js/Player.js',
                     'js/Computer.js',

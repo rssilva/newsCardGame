@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mano a Mano Soundtest</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div class="game-wrapper ">
+			<button class="start-whistle">Apito inicial</button>
+			<button class="snap">Snap de cartas</button>
+			<button class="riot">Comemoração</button>
+
+			<button class="music1">Music 1</button>
+			<button class="music2">Music 2</button>
+		</div>
+	</div>
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/buzz.min.js"></script>
+	<script>
+		var sounds = {};
+		sounds.extension = null;
+
+		if (buzz.isOGGSupported()) {
+			extension = '.ogg';
+		} else if (buzz.isMP3Supported()) {
+			extension = '.mp3';
+		}
+
+		if (buzz.isSupported()) {
+			sounds.startWhistle = new buzz.sound('../audio/startWhistle' + extension);
+			sounds.snap 		= new buzz.sound('../audio/snap' + extension);
+			sounds.riot 		= new buzz.sound('../audio/riot' + extension);
+			sounds.music1 		= new buzz.sound('../audio/music1' + extension, {loop: true});
+			sounds.music2 		= new buzz.sound('../audio/music2' + extension, {loop: true});
+		}
+
+		$('.start-whistle').on('click', function () {
+			sounds.startWhistle.play();
+		});
+
+		$('.snap').on('click', function () {
+			sounds.snap.play();
+		});
+
+		$('.riot').on('click', function () {
+			sounds.riot.play();
+		});
+
+		$('.music1').on('click', function () {
+			if (this.isPlaying) {
+				sounds.music1.stop();
+				this.isPlaying = false;
+			} else {
+				sounds.music1.play();
+				this.isPlaying = true;
+			}
+		});
+
+		$('.music2').on('click', function () {
+			if (this.isPlaying) {
+				sounds.music2.stop();
+				this.isPlaying = false;
+			} else {
+				sounds.music2.play();
+				this.isPlaying = true;
+			}
+		});
+	</script>
+</body>
+</html>

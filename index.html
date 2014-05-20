@@ -12,7 +12,12 @@
 		<div class="presentation-wrapper">
 			<h1 id="logo">Mano a Mano</h1>
 		</div>
-
+		<div class="game-general-options">
+			<div class="general-option-button general-music-button">
+				<span class="button-mask"></span>
+			</div>
+			<div class="general-option-button general-configurations-button"></div>
+		</div>
 		<div class="game-wrapper display-none">
 			<div class="score-container">
 				<div class="score-display score-user">
@@ -25,7 +30,6 @@
 			<ol id="player" class="deck"></ol>
 			<ol id="computer" class="deck"></ol>
 		</div>
-		
 
 		<div id="start-modal" class="modal display-none">
 			<ul class="start-options-list">
@@ -77,6 +81,22 @@
 					<p><a href="">Vamos pro Mano a Mano?</a></p>
 				</div>
 			</div>
+			<div class="game-configurations display-none">
+				<a href="javascript:;" class="back-to-start-options">Voltar</a>
+				<ul>
+					<li>
+						<span>Música</span>
+						<input type="checkbox" checked="checked" class=" game-config game-music">
+					</li>
+					<li>
+						<span>Efeitos</span>
+						<input type="checkbox" checked="checked" class=" game-config game-effects">
+					</li>
+					<li>
+						<button class="ok-config-button">Ok</button>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div id="round-confirm-modal" class="modal display-none">
 			<button class="ok-button">Ok</button>
@@ -84,7 +104,10 @@
 	</div>
 
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/buzz.min.js"></script>
 	<script type="text/javascript" src="js/StartModal.js"></script>
+	<script type="text/javascript" src="js/GeneralOptionsComponent.js"></script>
+	<script type="text/javascript" src="js/SoundModule.js"></script>
 	<script type="text/javascript" src="js/RoundModal.js"></script>
 	<script type="text/javascript" src="js/Player.js"></script>
 	<script type="text/javascript" src="js/Computer.js"></script>
