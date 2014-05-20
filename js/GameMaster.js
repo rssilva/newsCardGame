@@ -71,6 +71,7 @@
 			},
 
 			cacheElements: function () {
+				this.wrapper 			 = $('#wrapper');
 				this.presentationWrapper = $('.presentation-wrapper');
 				this.gameWrapper 		 = $('.game-wrapper');
 				this.userScore			 = $('.score-user').find('.score-number');
@@ -222,9 +223,55 @@
 			},
 
 			onGameEnd: function () {
+				var that = this;
+
 				if (this.score.player > this.score.pc) {
-					this.soundModule.playEffect('riot')
+					this.soundModule.playEffect('riot');
 				}
+
+				setTimeout(function () {
+					that.evaluateRate();
+					that.roundModal.close();
+				}, 1500);
+			},
+
+			evaluateRate: function () {
+				var totalRounds = this.gameMode.selectedMode.rounds,
+					page 		= 'p1',
+					extension   = ['.', 'h', 't', 'm', 'l'].join(''),
+					percentage  = this.score.player/totalRounds * 100;
+
+				if (percentage > 80) {
+					page = 'c17';
+				} else if (50 < percentage && percentage <= 80) {
+					page = 'm2';
+				}
+
+				page += extension;
+
+				this.getScreen(page);
+			},
+
+			getScreen: function (url) {
+				var that = this;
+
+				$.ajax({
+			        type: 'GET',
+			        url: url,
+			        dataType: 'html',
+			        success: function(data) {
+						that.appendScreen(data);
+		        	},
+		        	error: function (e) {
+		        		console.log(e)
+		        	}
+	     		});
+			},
+
+			appendScreen: function (data) {
+				this.wrapper.removeClass('field-image');
+				this.wrapper.append(data);
+				this.gameWrapper.addClass('display-none');
 			},
 
 			onRoundConfirmed: function () {
@@ -252,7 +299,7 @@
 
 				this.gameWrapper.removeClass('display-none');
 				this.presentationWrapper.addClass('display-none');
-				$('#wrapper').addClass('field-image');
+				this.wrapper.addClass('field-image');
 
 				this.gameMode.setMode(data.mode);
 

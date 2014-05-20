@@ -446,7 +446,7 @@ p {
 
 #share-wrapper {
 	background-color: #fff;
-	margin: 100px auto 0 auto;
+	margin: 40px auto 0 auto;
 	min-height: 625px;
 	padding: 12px 0 0 12px;
 	width: 463px;
@@ -531,7 +531,7 @@ p {
 
 .expert #punchline {
 	font-size: 12px;
-	width: 140px;
+	width: 150px;
 }
 
 #text-container {
