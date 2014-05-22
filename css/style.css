@@ -337,11 +337,11 @@ p {
 }
 
 .game-instructions, .game-configurations {
-	background: #39b54a;
+	background: transparent url('../img/popover.png') center top no-repeat;
 	padding: 10px;
 	height: 300px;
 	overflow: auto;
-	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4);
+	color: #fff;
 }
 
 .game-instructions p {
