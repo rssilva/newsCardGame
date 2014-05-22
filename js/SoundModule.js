@@ -83,7 +83,7 @@
 			},
 
 			playEffect: function (effect) {
-				if (!this.isMuted && this.effects[effect]) {
+				if (!this.isMuted && this.effectsOn && this.effects[effect]) {
 					this.effects[effect].play()
 				}
 			},

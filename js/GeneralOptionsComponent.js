@@ -5,8 +5,11 @@
 				var that = this, 
 					container = $('.game-general-options'),
 					musicButton = container.find('.general-music-button'),
-					configButton = container.find('.general-configurations-button'),
 					isMuted = this.isMuted();
+
+				this.configButton = container.find('.general-configurations-button');
+
+				this.bindEvents();
 
 				if (isMuted) {
 					musicButton.addClass('isMuted');
@@ -20,10 +23,10 @@
 					that.onMusicButtonClick(musicButton)
 				});
 
-				configButton.on('click', function () {
-					configButton.toggleClass('opened')
+				this.configButton.on('click', function () {
+					that.configButton.toggleClass('opened');
 
-					that.onConfigButtonClick(configButton);
+					that.onConfigButtonClick(that.configButton);
 				});
 			},
 
@@ -50,11 +53,20 @@
 			},
 
 			onConfigButtonClick: function (el) {
-				if (el.hasClass('opened')) {
-					gameMaster.startModal.onOptionClicked('configurations');
-				} else {
-					gameMaster.startModal.onOptionClicked('initial');
-				}
+				$(window).trigger('generalConfigClicked', {isOpened: el.hasClass('opened')});
+			},
+
+			bindEvents: function () {
+				var that = this;
+
+				$(window).on('configOpened', function () {
+					that.configButton.addClass('opened');
+				});
+
+				$(window).on('configClosed', function () {
+					that.configButton.removeClass('opened');
+					$(window).trigger('generalConfigClicked', {isOpened: false});
+				});
 			}
 		}
 	}

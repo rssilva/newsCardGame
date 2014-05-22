@@ -24,6 +24,7 @@
 				
 				for (counter = 0; counter < deckSize; counter++) {
 					li = $('<li class="card card-' + counter + '"></li>')
+					li.append($('<div class="ribbon ribbon-computer display-none"></div>'));
 					frontDiv = $('<div class="front"></div>');
 					frontInnerDiv = $('<div class="front-inner"></div>');
 					frontInnerDiv.append($('<span class="avatar"></span>'));

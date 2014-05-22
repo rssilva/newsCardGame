@@ -52,9 +52,17 @@ var exports = {};
 				var cookieConfig = this.getConfigFromCookie(),
 					$configEl	 = this.options.$el.find('.game-configurations');
 
-				$configEl.find('.game-music').attr('checked', cookieConfig.musicOn);
-				$configEl.find('.game-effects').attr('checked', cookieConfig.effectsOn);
+				if (cookieConfig.musicOn) {
+					$configEl.find('.game-config-music-label').addClass('isOn');
+				} else {
+					$configEl.find('.game-config-music-label').removeClass('isOn');
+				}
 
+				if (cookieConfig.effectsOn) {
+					$configEl.find('.game-config-effects-label').addClass('isOn');
+				} else {
+					$configEl.find('.game-config-effects-label').removeClass('isOn');
+				}
 			},
 
 			getConfigFromCookie: function () {
@@ -128,6 +136,8 @@ var exports = {};
 				this.$el.find('.game-instructions').addClass('display-none');
 				this.$el.find('.start-options-list').addClass('display-none');
 				this.$el.find('.game-options').addClass('display-none');
+
+				$(window).trigger('configOpened');
 			},
 
 			updateConfigurations: function () {
@@ -135,8 +145,8 @@ var exports = {};
 					data;
 
 				data = {
-					musicOn: $el.find('.game-music').is(':checked'),
-					effectsOn: $el.find('.game-effects').is(':checked')
+					musicOn: 	$el.find('.game-config-music-label').hasClass('isOn'),
+					effectsOn: 	$el.find('.game-config-effects-label').hasClass('isOn')
 				};
 
 				exports.createCookie('mano-a-mano-musicOn', data.musicOn, 3);
@@ -161,13 +171,27 @@ var exports = {};
 					that.onOptionClicked($(this).data('option'));
 				});
 
-				$el.find('.back-to-start-options').on('click', function () {
+				$el.find('.game-instructions').find('.back-to-start-options').on('click', function () {
 					that.onOptionClicked('initial');
 				});
 
-				$el.find('.game-configurations').find('.ok-config-button').on('click', function () {
+				$el.find('.game-configurations').find('.back-to-start-options').on('click', function () {
+					$(window).trigger('configClosed', {isOpened: false});
+				});
+
+				// $el.find('.game-configurations').find('.ok-config-button').on('click', function () {
+				// 	that.updateConfigurations();
+				// 	that.onOptionClicked('initial');
+				// });
+
+				$el.find('.game-config-music-label').on('click', function () {
+					$(this).toggleClass('isOn');
 					that.updateConfigurations();
-					that.onOptionClicked('initial');
+				});
+
+				$el.find('.game-config-effects-label').on('click', function () {
+					$(this).toggleClass('isOn');
+					that.updateConfigurations();
 				});
 			}
 		}

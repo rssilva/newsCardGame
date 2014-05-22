@@ -17,6 +17,7 @@
 					pc: 0
 				}
 				this.currentRound = 0;
+				this.isStarted = false;
 
 				this.cacheElements();
 
@@ -56,7 +57,6 @@
 
 			configRoundModal: function () {
 				this.roundModal = exports.roundModal;
-				this.roundModal.bindEvents();
 			},
 
 			instantiateSoundModule: function () {
@@ -149,8 +149,14 @@
 			highlightLoser: function (result) {
 				if (result === 'won') {
 					this.computer.firstCardHtml.append('<div class="looser"></div>');
+
+					this.computer.firstCardHtml.find('.ribbon').addClass('ribbon-looser').removeClass('display-none');
+					this.player.firstCardHtml.find('.ribbon').addClass('ribbon-winner').removeClass('display-none');
 				} else if (result === 'loose') {
 					this.player.firstCardHtml.append('<div class="looser"></div>');
+
+					this.computer.firstCardHtml.find('.ribbon').addClass('ribbon-winner').removeClass('display-none');
+					this.player.firstCardHtml.find('.ribbon').addClass('ribbon-looser').removeClass('display-none');
 				}
 			},
 
@@ -174,7 +180,7 @@
 				setTimeout(function () {
 					that.highlightLoser(result);
 					that.highlightAttribute(attr);
-					that.roundModal.open();
+					that.roundModal.open(result);
 				}, 1000);
 
 				//adding all round data to an object will allow us
@@ -269,6 +275,7 @@
 			},
 
 			appendScreen: function (data) {
+				this.wrapper.find('#logo').addClass('display-none');
 				this.wrapper.removeClass('field-image');
 				this.wrapper.append(data);
 				this.gameWrapper.addClass('display-none');
@@ -302,6 +309,7 @@
 				this.wrapper.addClass('field-image');
 
 				this.gameMode.setMode(data.mode);
+				this.isStarted = true;
 
 				this.soundModule.playEffect('startWhistle');
 
@@ -309,6 +317,32 @@
 					that.soundModule.playEffect('snap');
 					that.player.flipFirstCard();
 				}, 300);
+			},
+
+			onGeneralConfigClicked: function (isOpened) {
+				if (isOpened) {
+					//this.startModal.$el.removeClass('display-none');
+					this.startModal.onOptionClicked('configurations');
+					this.gameWrapper.addClass('display-none');
+					//this.gameWrapper.addClass('display-none');
+				} else {
+					//this.startModal.$el.addClass('display-none');
+					this.startModal.onOptionClicked('initial');
+					//this.gameWrapper.removeClass('display-none');
+				}
+
+				if (this.isStarted && isOpened) {
+					this.startModal.$el.removeClass('display-none');
+				}
+
+				if (this.isStarted && !isOpened) {
+					this.gameWrapper.removeClass('display-none');
+					this.startModal.$el.addClass('display-none');
+				}
+
+				if (!this.isStarted) {
+					this.startModal.$el.removeClass('display-none');
+				}
 			},
 
 			bindEvents: function () {
@@ -330,6 +364,10 @@
 
 				$(window).on('onGameModeScreen', function () {
 					that.onGameModeScreen();
+				});
+
+				$(window).on('generalConfigClicked', function (e, data) {
+					that.onGeneralConfigClicked(data.isOpened)
 				});
 			}
 		}
