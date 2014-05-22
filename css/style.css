@@ -21,6 +21,7 @@ p {
 	padding: 0;
 }
 
+.text-center {text-align: center;}
 .display-none {display: none}
 .mb15 {margin-bottom: 15px}
 
@@ -77,9 +78,10 @@ p {
 
 #logo {
 	width: 279px;
-	height: 278px;
+	height: 176px;
 	margin: 0 auto;
-	background-image: url('../img/title-logo.png');
+	background-image: url('../img/title-logo2.png');
+	background-repeat: no-repeat;
 	font-size: 0px;
 }
 
@@ -265,16 +267,23 @@ p {
 
 #start-modal {
 	z-index: 2;
-	width: 530px;
+	width: 580px;
 	min-height: 200px;
 	margin: 50px auto 0 auto;
 }
 
+.back-to-start-options {
+	/*position: absolute;*/
+	bottom: 10px;
+}
+
 .start-options-list, .game-options {
 	list-style: none;
-	margin: 0;
+	margin: 0 25px 0 25px;
 	padding: 0;
 	position: relative;
+	width: 530px;
+
 }
 
 .start-option, .game-option {
@@ -337,12 +346,40 @@ p {
 }
 
 .game-instructions, .game-configurations {
-	background: transparent url('../img/popover.png') center top no-repeat;
-	padding: 10px;
+	/*background: transparent url('../img/popover.png') center top no-repeat;*/
+	
+	background-size: 460px 220px;
+	padding-top: 20px;
 	height: 300px;
-	overflow: auto;
 	color: #fff;
+	width: 580px;
 }
+
+.game-instructions-header {
+	position: absolute;
+	width: 582px;
+	height: 68px;
+	background-image: url('../img/blue-stripe.png');
+	text-align: center;
+}
+
+.game-instructions-body {
+	width: 460px;
+	overflow: auto;
+	padding-top: 10px;
+	height: 220px;
+	margin: 58px auto 0 auto;
+	background-image: url('../img/modal-background.png');
+	background-position: 0 -10px;
+}
+
+.game-instructions-footer {
+	background-image: url('../img/modal-background.png');
+	width: 460px;
+	margin: 0 auto;
+}
+
+
 
 .game-instructions p {
 	margin-bottom: 8px;
