@@ -341,7 +341,7 @@ p {
 	padding: 10px;
 	height: 300px;
 	overflow: auto;
-	box-shadow: 5px 5px #333;
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .game-instructions p {
@@ -377,10 +377,6 @@ p {
 
 .game-instructions .instructions-end {
 	margin-top: 50px;
-}
-
-.game-configurations {
-
 }
 
 #round-confirm-modal {
@@ -585,21 +581,21 @@ p {
 	text-align: center;
 	height: 50px;
 	font-size: 50px;
-	font-family: 'Oswald Regular';
+	font-family: 'Oswald';
 }
 
 .share-subtitle {
 	margin: 15px auto 0 auto;
 	text-align: center;
 	font-size: 40px;
-	font-family: 'Oswald Light';
+	font-family: 'Oswald';
 }
 
 .share-description {
 	margin: 10px auto 0 auto;
 	width: 375px;
 	font-size: 11px;
-	font-family: 'Lato Regular';
+	font-family: 'Lato';
 }
 
 .share-button {
