@@ -329,10 +329,7 @@ p {
 
 .game-option .icon-timer {
 	line-height: 60px;
-}
-
-.game-option .icon-cup {
-	
+	margin-right: 41px;
 }
 
 .modal-option {
