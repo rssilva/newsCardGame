@@ -16,8 +16,9 @@
 					player: 0,
 					pc: 0
 				}
-				this.currentRound = 0;
-				this.isStarted = false;
+				this.currentRound 	= 0;
+				this.isStarted 		= false;
+				this.isEnded 		= false;
 
 				this.cacheElements();
 
@@ -177,6 +178,7 @@
 				result = this.evaluateResult(playerValue, pcValue);
 
 				this.setScore();
+
 				setTimeout(function () {
 					that.highlightLoser(result);
 					that.highlightAttribute(attr);
@@ -230,6 +232,8 @@
 
 			onGameEnd: function () {
 				var that = this;
+
+				this.isEnded = true;
 
 				if (this.score.player > this.score.pc) {
 					this.soundModule.playEffect('riot');
@@ -321,14 +325,11 @@
 
 			onGeneralConfigClicked: function (isOpened) {
 				if (isOpened) {
-					//this.startModal.$el.removeClass('display-none');
 					this.startModal.onOptionClicked('configurations');
 					this.gameWrapper.addClass('display-none');
-					//this.gameWrapper.addClass('display-none');
+					this.wrapper.find('#share-container').addClass('display-none');
 				} else {
-					//this.startModal.$el.addClass('display-none');
 					this.startModal.onOptionClicked('initial');
-					//this.gameWrapper.removeClass('display-none');
 				}
 
 				if (this.isStarted && isOpened) {
@@ -342,6 +343,18 @@
 
 				if (!this.isStarted) {
 					this.startModal.$el.removeClass('display-none');
+				}
+
+				if (this.isEnded && isOpened) {
+					this.gameWrapper.addClass('display-none');
+					this.startModal.$el.removeClass('display-none');
+					this.wrapper.find('#share-container').addClass('display-none');
+				}
+
+				if (this.isEnded && !isOpened) {
+					this.gameWrapper.addClass('display-none');
+					this.startModal.$el.addClass('display-none');
+					this.wrapper.find('#share-container').removeClass('display-none');
 				}
 			},
 

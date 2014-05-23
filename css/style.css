@@ -62,7 +62,7 @@ ul {list-style: none;}
 	float: left;
 	width: 60px;
 	height: 60px;
-	background-image: url(../img/options.png);
+	background-image: url(../img/options2.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
@@ -71,13 +71,13 @@ ul {list-style: none;}
 	background-position: 5px 5px;
 }
 
-.isMuted .button-mask{
-	background-color: #333;
-	opacity: 0.3;
+.isMuted {
+	
+	background-position: -147px 5px;
 }
 
 .general-configurations-button {
-	background-position: -60px 5px;
+	background-position: -65px 5px;
 }
 
 .button-mask {
@@ -618,6 +618,10 @@ ul {list-style: none;}
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+#share-container {
+	margin-top: 50px;
 }
 
 #share-wrapper { 

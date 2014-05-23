@@ -15,7 +15,7 @@
 			setTimeout(function () {
 				$(window).trigger('confirmRound');
 				that.close();
-			}, 1000);
+			}, 1500);
 		},
 		close: function () {
 			this.$el.addClass('display-none');
