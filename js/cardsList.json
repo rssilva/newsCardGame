@@ -2,7 +2,7 @@
     "availableCards": [
         {
             "name": "Van Persie",
-            "uriName": "sample-",
+            "infoExtra": "Van Persie, Holanda, Grupo B, 30 anos, Atacante",
 			"attributes": {
 				"matches"	: 47,
 				"goals"		: 30,
@@ -14,7 +14,7 @@
         },
         {
             "name": "Messi",
-            "uriName": "sample-",
+            "infoExtra": "Messi, Argentina, Grupo F, 26 anos, Atacante",
 			"attributes": {
 				"matches"	: 84,
 				"goals"		: 37,
@@ -26,7 +26,7 @@
         },
         {
             "name": "Ribéry",
-            "uriName": "sample-",
+            "infoExtra": "Ribéry, França, Grupo E, 31 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 81,
 				"goals"		: 1,
@@ -38,7 +38,7 @@
         },
         {
             "name": "Kompany",
-            "uriName": "sample-",
+            "infoExtra": "Kompany, Bélgica, Grupo H, 28 anos, Zagueiro",
 			"attributes": {
 				"matches"	: 57,
 				"goals"		: 4,
@@ -50,7 +50,7 @@
         },
         {
             "name": "Bryan Ruiz",
-            "uriName": "sample-",
+            "infoExtra": "Bryan Ruiz, Costa Rica, Grupo D, 28 anos, Atacante",
 			"attributes": {
 				"matches"	: 62,
 				"goals"		: 12,
@@ -62,7 +62,7 @@
         },        
         {
             "name": "Rafael Márquez",
-            "uriName": "sample-",
+            "infoExtra": "Rafael Márquez, México, Grupo A, 35 anos, Zagueiro",
 			"attributes": {
 				"matches"	: 79,
 				"goals"		: 10,
@@ -74,7 +74,7 @@
         },
 		{
             "name": "Shaqiri",
-            "uriName": "sample-",
+            "infoExtra": "Xherdan Shaqiri, Suíça, Grupo E, 22 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 31,
 				"goals"		: 8,
@@ -86,7 +86,7 @@
         },        
         {
             "name": "Cahill",
-            "uriName": "sample-",
+            "infoExtra": "Tim Cahill, Austrália, Grupo B, 34 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 67,
 				"goals"		: 31,
@@ -98,7 +98,7 @@
         },
 		{
             "name": "Falcao Garcia",
-            "uriName": "sample-",
+            "infoExtra": "Falcão García, Colômbia, Grupo C, 28 anos, Atacante",
 			"attributes": {
 				"matches"	: 50,
 				"goals"		: 20,
@@ -110,7 +110,7 @@
         },        
         {
             "name": "Modric",
-            "uriName": "sample-",
+            "infoExtra": "Luka Modric, Croácia, Grupo A, 28 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 73,
 				"goals"		: 8,
@@ -122,7 +122,7 @@
         },        
 		{
             "name": "Eto'o",
-            "uriName": "sample-",
+            "infoExtra": "Samuel Eto'o, Camarões, Grupo A, 33 anos, Atacante",
 			"attributes": {
 				"matches"	: 114,
 				"goals"		: 55,
@@ -134,7 +134,7 @@
         },        
         {
             "name": "Edin Dzeko",
-            "uriName": "sample-",
+            "infoExtra": "Edin Džeko, Bósnia e Herzegovina, Grupo F, 28 anos, Atacante",
 			"attributes": {
 				"matches"	: 58,
 				"goals"		: 33,
@@ -146,7 +146,7 @@
         },
 		{
             "name": "Suárez",
-            "uriName": "sample-",
+            "infoExtra": "Luis Suárez, Uruguai, Grupo D, 27 anos, Atacante",
 			"attributes": {
 				"matches"	: 77,
 				"goals"		: 38,
@@ -158,7 +158,7 @@
         },        
         {
             "name": "Iniesta",
-            "uriName": "sample-",
+            "infoExtra": "Andrés Iniesta, Espanha, Grupo B, 29 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 95,
 				"goals"		: 10,
@@ -170,7 +170,7 @@
         },
 		{
             "name": "Vidal",
-            "uriName": "sample-",
+            "infoExtra": "Arturo Vidal, Chile, Grupo B, 27 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 53,
 				"goals"		: 8,
@@ -182,7 +182,7 @@
         },        
         {
             "name": "Pirlo",
-            "uriName": "sample-",
+            "infoExtra": "Pirlo, Itália, Grupo D, 35 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 108,
 				"goals"		: 13,
@@ -194,7 +194,7 @@
         },
         {
             "name": "Kagawa",
-            "uriName": "sample-",
+            "infoExtra": "Shinji Kagawa, Japão, Grupo C, 25 anos, Atacante",
 			"attributes": {
 				"matches"	: 54,
 				"goals"		: 16,
@@ -206,7 +206,7 @@
         },
         {
             "name": "Neuer",
-            "uriName": "sample-",
+            "infoExtra": "Neuer, Alemanha, Grupo F, 28 anos, Goleiro",
 			"attributes": {
 				"matches"	: 45,
 				"goals"		: 0,
@@ -218,7 +218,7 @@
         },
         {
             "name": "Noboa",
-            "uriName": "sample-",
+            "infoExtra": "Christian Noboa, Equador, Grupo E, 29 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 35,
 				"goals"		: 1,
@@ -230,7 +230,7 @@
         },
         {
             "name": "Donovan",
-            "uriName": "sample-",
+            "infoExtra": "Landon Donovan, Estados Unidos, Grupo G, 32 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 154,
 				"goals"		: 57,
@@ -242,7 +242,7 @@
         },
         {
             "name": "Tourè",
-            "uriName": "sample-",
+            "infoExtra": "Yaya Touré, Costa do Marfim, Grupo C, 31 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 83,
 				"goals"		: 14,
@@ -254,7 +254,7 @@
         },
         {
             "name": "Rooney",
-            "uriName": "sample-",
+            "infoExtra": "Wayne Rooney, Inglaterra, Grupo D, 28 anos, Atacante",
 			"attributes": {
 				"matches"	: 85,
 				"goals"		: 38,
@@ -266,7 +266,7 @@
         },
         {
             "name": "Neymar",
-            "uriName": "sample-",
+            "infoExtra": "Neymar, Brasil, Grupo A, 22 anos, Atacante",
 			"attributes": {
 				"matches"	: 47,
 				"goals"		: 30,
@@ -278,7 +278,7 @@
         },
         {
             "name": "Ronaldo",
-            "uriName": "sample-",
+            "infoExtra": "Cristiano Ronaldo, Portugal, Grupo G, 29 anos, Atacante",
 			"attributes": {
 				"matches"	: 110,
 				"goals"		: 49,
@@ -290,7 +290,7 @@
         },
         {
             "name": "Nekounam",
-            "uriName": "sample-",
+            "infoExtra": "Javad Nekounam, Irã, Grupo F, 33 anos, Meio-campo",
 			"attributes": {
 				"matches"	: 92,
 				"goals"		: 29,
@@ -302,7 +302,7 @@
         },
         {
             "name": "Mikel",
-            "uriName": "sample-",
+            "infoExtra": "",
 			"attributes": {
 				"matches"	: 40,
 				"goals"		: 4,
@@ -314,7 +314,7 @@
         },
         {
             "name": "Bengtson",
-            "uriName": "sample-",
+            "infoExtra": "Jerry Bengtson, Honduras, Grupo E, 27 anos, Atacante",
 			"attributes": {
 				"matches"	: 41,
 				"goals"		: 19,
@@ -326,7 +326,7 @@
         },
         {
             "name": "Samedov",
-            "uriName": "sample-",
+            "infoExtra": "Aleksandr Samedov, Rússia, Grupo H, 29 anos, Meio-Campo",
 			"attributes": {
 				"matches"	: 14,
 				"goals"		: 3,
@@ -338,7 +338,7 @@
         },
         {
             "name": "Feghouli",
-            "uriName": "sample-",
+            "infoExtra": "Sofiane Feghouli, Argélia, Grupo H, 24 anos, Meio-Campo",
 			"attributes": {
 				"matches"	: 17,
 				"goals"		: 5,
@@ -350,7 +350,7 @@
         },
         {
             "name": "Heung-min Son",
-            "uriName": "sample-",
+            "infoExtra": "Heung-Min Son, Coreia do Sul, Grupo H, 21 anos, Atacante",
 			"attributes": {
 				"matches"	: 24,
 				"goals"		: 6,
@@ -362,7 +362,7 @@
         },
         {
             "name": "Asamoah Gyan",
-            "uriName": "sample-",
+            "infoExtra": "Asamoah Gyan, Gana, Grupo G, 28 anos, Atacante",
 			"attributes": {
 				"matches"	: 78,
 				"goals"		: 39,
@@ -374,7 +374,7 @@
         },
         {
             "name": "Papastathopoulos",
-            "uriName": "sample-",
+            "infoExtra": "Sokratis Papastathopoulos, Grécia, Grupo C, 26 anos, Zagueiro",
 			"attributes": {
 				"matches"	: 46,
 				"goals"		: 0,
