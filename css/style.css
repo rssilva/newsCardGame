@@ -101,6 +101,8 @@ ul {list-style: none;}
 }
 
 .logo-link {
+	position: absolute;
+	z-index: 2;
 	display: block;
 	width: 279px;
 	height: 126px;
@@ -315,7 +317,7 @@ ul {list-style: none;}
 	margin: 50px auto 0 auto;
 }
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 12px;
 }
  
@@ -327,7 +329,7 @@ ul {list-style: none;}
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
+}*/
 
 .back-to-start-options {
 	/*position: absolute;*/
@@ -373,6 +375,12 @@ ul {list-style: none;}
 	font-family: 'Lobster', cursive;
 }
 
+.start-label-link {
+	position: absolute;
+	width: 100%;
+	text-decoration: none;
+}
+
 .start-image, .option-image {
 	height: 74px;
 	width: 90px;
@@ -396,6 +404,18 @@ ul {list-style: none;}
 	margin: -7px 30px 0 0;
 }
 
+.start-source {
+	background-image: url(../img/source.svg);
+	background-size:  90% 90%;
+	background-position: -5px 11px;
+}
+
+.gallery-link {
+	background-image: url(../img/gallery.svg);
+	background-size:  100% 100%;
+	background-position: -10px -3px;
+}
+
 .game-option .icon {
 	height: 60px;
 	line-height: 70px;
@@ -416,7 +436,7 @@ ul {list-style: none;}
 	cursor: pointer;
 }
 
-.game-instructions, .game-configurations {
+.game-instructions, .game-configurations, .game-sources {
 	/*background: transparent url('../img/popover.png') center top no-repeat;*/
 	
 	background-size: 460px 220px;
@@ -426,7 +446,7 @@ ul {list-style: none;}
 	width: 580px;
 }
 
-.game-instructions-header, .game-configurations-header {
+.tab-header {
 	position: absolute;
 	width: 582px;
 	height: 68px;
@@ -435,13 +455,14 @@ ul {list-style: none;}
 	font-family: 'Lobster';
 	font-size: 40px;
 	line-height: 55px;
+	color: #fff;
 }
 
-.game-instructions-body, .game-configurations-body {
+.tab-body {
 	width: 425px;
 	overflow: auto;
 	padding: 10px 20px 0 20px;
-	height: 160px;
+	height: 260px;
 	margin: 58px auto 0 auto;
 	background-image: url('../img/modal-background.png');
 	background-position: 0 -10px;
@@ -491,6 +512,20 @@ ul {list-style: none;}
 
 .game-instructions .instructions-end {
 	margin-top: 50px;
+}
+
+.game-sources-content {
+	line-height: 22px;
+	margin-bottom: 10px;
+}
+
+.game-sources-links {
+	margin-bottom: 15px;
+}
+
+.game-sources-links a {
+	color: #fff;
+	text-decoration: none;
 }
 
 .config-list {

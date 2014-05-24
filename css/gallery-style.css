@@ -12,6 +12,7 @@ h1 {
 	color: #fff;
 	font-size: 50px;
 	text-align: center;
+	font-family: 'Lobster';
 }
 
 p {
@@ -70,7 +71,54 @@ p {
 	background-size: 100% auto;
 }
 
+.start-option, .game-option {
+	background-image: url('../img/pennant-opening.png');
+	height: 92px;
+	cursor: pointer;
+	text-indent: 100px;
+}
 
+.replay-option {
+	width: 530px;
+	height: 92px;
+	margin: 20px auto 0 auto;
+}
+
+.replay-link {
+	display: block;
+	width: 100%;
+	height: 70px;
+	position: relative;
+}
+
+.start-label, .option-label {
+	font-size: 40px;
+	line-height: 63px;
+	color: #fff;
+	display: block;
+	float: left;
+	font-family: 'Lobster', cursive;
+}
+
+.start-label-link {
+	position: absolute;
+	width: 100%;
+	text-decoration: none;
+}
+
+
+.start-image, .option-image {
+	height: 74px;
+	width: 90px;
+	margin-right: 20px;
+	float: right;
+	background: url('../img/players.png') no-repeat;
+}
+
+.start-play {
+	background-position: 0 0;
+	margin: 2px 16px 0 0;
+}
 
 #player {
 	left: 16%;

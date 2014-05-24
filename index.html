@@ -27,7 +27,7 @@
 	
 		<div class="">
 			<h1 id="logo">
-				<a class="logo-link" href="">Mano a Mano</a>
+				<a class="logo-link" href="index.html">Mano a Mano</a>
 			</h1>
 		</div>
 		<div class="game-wrapper display-none">
@@ -46,7 +46,7 @@
 		</div>
 
 		<div id="start-modal" class="modal display-none">
-			<ul class="start-options-list">
+			<ul class="start-menu-tab start-options-list">
 				<li class="start-option" data-option="start">
 					<span class="start-label">Jogar</span>
 					<span class="start-image start-play">&nbsp;</span>
@@ -59,8 +59,16 @@
 					<span class="start-label">Configurações</span>
 					<span class="start-image start-configurations">&nbsp;</span>
 				</li>
+				<li class="start-option" data-option="sources">
+					<span class="start-label">Fontes</span>
+					<span class="start-image start-source">&nbsp;</span>
+				</li>
+				<li class="start-option" data-option="gallery">
+					<a class="start-label start-label-link" href="galeria/">Galeria</a>
+					<span class="start-image gallery-link">&nbsp;</span>
+				</li>
 			</ul>
-			<ul class="game-options display-none">
+			<ul class="start-menu-tab game-options display-none">
 				<li class="game-option" data-mode="definedRounds">
 					<span class="option-label">Partida rápida</span>
 					<span class="icon icon-timer">&nbsp;</span>
@@ -70,11 +78,11 @@
 					<span class="icon icon-cup">&nbsp;</span>
 				</li>
 			</ul>
-			<div class="game-instructions display-none">
-				<div class="game-instructions-header">
+			<div class="start-menu-tab game-instructions display-none">
+				<div class="tab-header game-instructions-header">
 					Instruções
 				</div>
-				<div class="game-instructions-body">
+				<div class="game-instructions-body tab-body">
 					<div class="instructions-resume">
 						<p class="main-title">COMO JOGAR</p>
 						<p>São 32 cartas, representando as seleções que disputam a Copa no Brasil.</p>
@@ -102,11 +110,11 @@
 					<a href="javascript:;" class="back-to-start-options">Voltar</a>
 				</div>
 			</div>
-			<div class="game-configurations display-none">
-				<div class="game-configurations-header">
+			<div class="start-menu-tab game-configurations display-none">
+				<div class="tab-header game-configurations-header">
 					Configurações
 				</div>
-				<div class="game-configurations-body">
+				<div class="game-configurations-body tab-body">
 					<ul class="config-list">
 						<li>
 							<span class="game-config-item game-config-music-label isOn">Música</span>
@@ -125,6 +133,35 @@
 					<a href="javascript:;" class="back-to-start-options">Voltar</a>
 				</div>
 			</div>
+			<div class="start-menu-tab game-sources display-none">
+				<div class="tab-header ">
+					Fontes
+				</div>
+				<div class="game-sources-body tab-body">
+					<div class="game-sources-content">
+						<p>Nas cartas, as informações de “Força” dos jogadores foram obtidas através de votação com representantes da Zero Hora, Rádio Gaúcha, RBSTV e TVCom: Carlos Guimarães, Cléber Grabauska, Filipe Gamba, Maurício Saraiva, André Silva, Leonel Chaves, André Baibich, Luiz Zini Pires, Diogo Olivier e Rafael Diverio.</p>
+						<p>As demais informações vieram de sites pessoais de alguns jogadores e confederações, além dos seguintes: FIFA, Zero Hora, ESPN, Folha de São Paulo, Esporte Interativo, Estadão, O Gol, SoccerWay, Goal, National Football Teams, UEFA, Soccerbase e Bleacher Report.</p>
+					</div>
+					<div class="game-sources-links">
+						<p><a href="http://www.fifa.com">http://www.fifa.com</a></p>
+						<p><a href="http://zerohora.clicrbs.com.br">http://zerohora.clicrbs.com.br</a></p>
+						<p><a href="http://espn.uol.com.br">http://espn.uol.com.br</a></p>
+						<p><a href="http://www1.folha.uol.com.br">http://www1.folha.uol.com.br</a></p>
+						<p><a href="http://br.esporteinterativo.yahoo.com">http://br.esporteinterativo.yahoo.com</a></p>
+						<p><a href="http://www.estadao.com.br">http://www.estadao.com.br</a></p>
+						<p><a href="http://www.ogol.com.br">http://www.ogol.com.br</a></p>
+						<p><a href="http://br.soccerway.com">http://br.soccerway.com</a></p>
+						<p><a href="http://www.goal.com">http://www.goal.com</a></p>
+						<p><a href="http://www.national-football-teams.com">http://www.national-football-teams.com</a></p>
+						<p><a href="http://www.uefa.com">http://www.uefa.com</a></p>
+						<p><a href="http://www.soccerbase.com">http://www.soccerbase.com</a></p>
+						<p><a href="http://bleacherreport.com">http://bleacherreport.com</a></p>
+					</div>
+				</div>
+				<div class="text-center game-instructions-footer">
+					<a href="javascript:;" class="back-to-start-options">Voltar</a>
+				</div>
+			</div>			
 		</div>
 		<div id="round-confirm-modal" class="modal display-none"></div>
 	</div>

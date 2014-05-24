@@ -101,43 +101,38 @@ var exports = {};
 					this.toInstructions();
 				} else if (option === 'configurations') {
 					this.toConfigurations();
+				} else if (option === 'sources') {
+					this.toSources();
 				}
 			},
 
 			toInitialOptions: function () {
+				this.$el.find('.start-menu-tab').addClass('display-none');
 				this.$el.find('.start-options-list').removeClass('display-none');
-
-				this.$el.find('.game-options').addClass('display-none');
-				this.$el.find('.game-instructions').addClass('display-none');
-				this.$el.find('.game-configurations').addClass('display-none');
 			},
 
 			toGameModeOptions: function () {
 				$(window).trigger('onGameModeScreen');
 
+				this.$el.find('.start-menu-tab').addClass('display-none');
 				this.$el.find('.game-options').removeClass('display-none');
-
-				this.$el.find('.start-options-list').addClass('display-none');
-				this.$el.find('.game-instructions').addClass('display-none');
-				this.$el.find('.game-configurations').addClass('display-none');
 			},
 
 			toInstructions: function () {
+				this.$el.find('.start-menu-tab').addClass('display-none');
 				this.$el.find('.game-instructions').removeClass('display-none');
-
-				this.$el.find('.start-options-list').addClass('display-none');
-				this.$el.find('.game-options').addClass('display-none');
-				this.$el.find('.game-configurations').addClass('display-none');
 			},
 
 			toConfigurations: function () {
+				this.$el.find('.start-menu-tab').addClass('display-none');
 				this.$el.find('.game-configurations').removeClass('display-none');
 
-				this.$el.find('.game-instructions').addClass('display-none');
-				this.$el.find('.start-options-list').addClass('display-none');
-				this.$el.find('.game-options').addClass('display-none');
-
 				$(window).trigger('configOpened');
+			},
+
+			toSources: function () {
+				this.$el.find('.start-menu-tab').addClass('display-none');
+				this.$el.find('.game-sources').removeClass('display-none');
 			},
 
 			updateConfigurations: function () {
@@ -171,12 +166,17 @@ var exports = {};
 					that.onOptionClicked($(this).data('option'));
 				});
 
+
 				$el.find('.game-instructions').find('.back-to-start-options').on('click', function () {
 					that.onOptionClicked('initial');
 				});
 
 				$el.find('.game-configurations').find('.back-to-start-options').on('click', function () {
 					$(window).trigger('configClosed', {isOpened: false});
+				});
+
+				$el.find('.game-sources').find('.back-to-start-options').on('click', function () {
+					that.onOptionClicked('initial');
 				});
 
 				// $el.find('.game-configurations').find('.ok-config-button').on('click', function () {
